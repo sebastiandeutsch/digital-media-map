@@ -6,7 +6,6 @@ class Company < ActiveRecord::Base
   mount_uploader :logo, LogoUploader
 
   attr_accessible :name, :description, :street, :zip, :city, :url, :email, :searches, :provides, :facebook_url, :twitter_url, :rss_url
-  validates_presence_of :name, :description, :street, :zip, :city, :email
 
   before_save :query_for_lonlat
 
