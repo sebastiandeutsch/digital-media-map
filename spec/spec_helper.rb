@@ -17,3 +17,8 @@ RSpec.configure do |config|
   config.before                 { DatabaseCleaner.start }
   config.after                  { DatabaseCleaner.clean }
 end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/cassettes'
+  c.hook_into :webmock
+end
