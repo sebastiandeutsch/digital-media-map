@@ -1,6 +1,6 @@
 window.MarkerWithPopup = class
   constructor: (@map, @startup) ->
-    point = new google.maps.LatLng(@startup.lonlat[1], @startup.lonlat[0])
+    point = new google.maps.LatLng(@startup.lat, @startup.lon)
     @overlay = new CompanyOverlay(point, startup, map);
     shadow = '/assets/company-holder.png';
     image = new google.maps.MarkerImage(startup.logo,
