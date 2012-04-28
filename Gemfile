@@ -44,6 +44,7 @@ end
 gem 'jquery-rails'
 
 group :test do
+  gem "vcr", "~> 2.1"
   gem "mocha", "~> 0.10"
   gem "factory_girl_rails", "~> 1.7", require: false
   gem "database_cleaner", "~> 0.7"

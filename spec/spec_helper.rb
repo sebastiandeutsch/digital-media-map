@@ -6,6 +6,7 @@ require "factory_girl_rails"
 
 RSpec.configure do |config|
   config.mock_with :mocha
+  config.extend VCR::RSpec::Macros
 
   config.before :suite do
     #DatabaseCleaner.strategy = :transaction
