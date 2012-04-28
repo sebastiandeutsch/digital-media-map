@@ -1,20 +1,9 @@
-%header.clearfix
-  %h1
-    Digital Media Map // NRW
-  %ul#nav
-    %li
-      %a{:title => "Karte", :href => "#"} » Karte
-    %li
-      %a{:title => "Liste", :href => "#"} » Liste
-    %li
-      %a{:title => "Über uns", :href => "#"} » Über uns
-    %li
-      %a{:title => "Impressum", :href => "#"} » Impressum
-.container
+= render :partial => 'shared/header'
+#container
   %h2
     Impressum
   .clearfix
-    .content
+    #content
       %p.br Angaben gemäß § 5 TMG: 
       %p.br e. V.
       %p.br Deutz-Mülheimer Str
