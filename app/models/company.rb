@@ -8,15 +8,19 @@ class Company < ActiveRecord::Base
   attr_accessible :name, :description, :street, :zip, :city, :url, :email, :searches, :provides, :facebook_url, :twitter_url, :rss_url
 
   before_save :query_for_lonlat
-
+  
+  QUERY_API = GoogleMaps
+  
   def query_for_lonlat
     lonlat = QUERY_API.query_for_lonlat(self.address, options = {})
-    self.lonlat = lonlat
+    
+    self.lon = lonlat.first
+    self.lat = lonlat.second
     self.not_found = false
     true
   rescue
     self.not_found = true
-    false
+    true
   end
 
   def address
