@@ -1,0 +1,5 @@
+# https://github.com/travis-ci/travis-ci/wiki/.travis.yml-options
+language: "ruby"
+script: "bundle exec rake"
+rvm:
+  - 1.9.3
