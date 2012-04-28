@@ -1,8 +1,9 @@
-#content
-  %h1
+= render :partial => 'shared/header'
+.container
+  %h2
     Here comes a list
-    .functions
-      = link_to "Neues Startup hinzufügen", new_company_path
+  .functions
+    = link_to "Neues Startup hinzufügen", new_company_path
   %table
     %thead
       %tr
