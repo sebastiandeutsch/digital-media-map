@@ -23,9 +23,6 @@ class Company
   
   validates_presence_of :name, :description, :street, :zip, :city, :email
   
-  class QueryError < RuntimeError; end #the query could not be fulfilled. all error classes derive from this
-  class QueryingProblem < QueryError; end
-  class NoResultKnown < QueryError; end
   QUERY_API = GoogleMaps
   
   before_save :query_for_lonlat
