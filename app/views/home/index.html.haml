@@ -1,2 +1,13 @@
 = render :partial => 'shared/header'
 #map-canvas
+#filter-panel
+  = form_for @search, :url => companies_url do |f|
+    %ul
+      - Category.all.each do |category|
+        %li
+          = category.name
+          %ul
+            - category.tags.each do |tag|
+              %li
+                = tag.name
+                = check_box_tag "search[tags_id_in][]", tag.id
