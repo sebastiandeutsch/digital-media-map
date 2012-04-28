@@ -1,0 +1,21 @@
+companies: 
+  - 
+    name: foo
+    pitch: 
+    address:
+    url:
+    email:
+    category:
+    sub_categories:
+      - foo
+      - bar
+  - 
+    name: foo
+    pitch: 
+    address:
+    url:
+    email:
+    category:
+    sub_categories:
+      - foo
+      - bar
