@@ -12,8 +12,9 @@ class Company
   field :searching_for, :type => String
   field :providing,     :type => String
   
-  field :has_funding,   :type => Boolean, :default => false
-  field :is_hiring,     :type => Boolean, :default => false
+  field :has_funding,           :type => Boolean, :default => false
+  field :searching_for_funding, :type => Boolean, :default => false 
+  field :is_hiring,             :type => Boolean, :default => false
   
   field :not_found,     :type => Boolean, :default => true
   field :lonlat,        :type => Array
