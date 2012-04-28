@@ -1,6 +1,11 @@
 require 'net/http'
 
 module GoogleMaps
+  
+  class QueryError < RuntimeError; end #the query could not be fulfilled. all error classes derive from this
+  class QueryingProblem < QueryError; end
+  class NoResultKnown < QueryError; end
+
   CONFIG = {
     :api_key => nil,
     :country_code_bias => nil
@@ -35,46 +40,15 @@ module GoogleMaps
       when G_GEO_SUCCESS
         return [longitude.to_f, latitude.to_f]
       when G_GEO_UNKNOWN_ADDRESS
-        raise Geolocation::NoResultKnown
+        raise GoogleMaps::NoResultKnown
       else
-        raise Geolocation::QueryingProblem, "GGeoStatusCode #{status}"
+        raise GoogleMaps::QueryingProblem, "GGeoStatusCode #{status}"
       end
     else
-      raise Geolocation::QueryingProblem, "#{http_response.code} #{http_response.message} for #{query_string}"
+      raise GoogleMaps::QueryingProblem, "#{http_response.code} #{http_response.message} for #{url}"
     end
   end
-  
-  # Not in use currently! Zipcode to City not working correctly (Google sucks!)
-  def self.query_for_german_plz(what)
-    options = CONFIG.merge({ :country_code_bias => 'de', :output_format => 'xml'})
-      
-    url = query_url(what, options)
-    
-    http_response = Net::HTTP.get_response(URI.parse(url))
-    
-    if http_response.is_a? Net::HTTPOK
-      xml = Nokogiri::XML.parse http_response.body 
-      status = xml.css("code").text
 
-      case status
-      when G_GEO_SUCCESS
-        #Result in Germany?
-        if xml.css('default|Placemark foo|CountryName', {'default' => 'http://earth.google.com/kml/2.0', 'foo' => 'urn:oasis:names:tc:ciq:xsdschema:xAL:2.0'}).text == 'Deutschland'
-          return xml.css('default|Placemark foo|LocalityName', {'default' => 'http://earth.google.com/kml/2.0', 'foo' => 'urn:oasis:names:tc:ciq:xsdschema:xAL:2.0'}).text          
-        else
-          raise Geolocation::NoResultKnown
-        end          
-      when G_GEO_UNKNOWN_ADDRESS
-        raise Geolocation::NoResultKnown
-      else
-        #unknown http status code response
-        raise Geolocation::QueryingProblem, "GGeoStatusCode #{status}"
-      end
-    else
-      raise Geolocation::QueryingProblem, "#{http_response.code} #{http_response.message} for #{query_string}"
-    end
-  end
-  
   def self.query_url(what, options)
     url = "http://maps.google.com/maps/geo?q=#{URI.escape(what)}&output=#{options[:output_format]}"
     url += "&gl=#{options[:country_code_bias]}" if options[:country_code_bias]
