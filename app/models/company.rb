@@ -16,6 +16,10 @@ class Company
   field :searching_for, :type => String
   field :providing,     :type => String
   
+  field :facebook_url, :type => String
+  field :twitter_url,  :type => String
+  field :rss_url,      :type => String
+  
   field :has_funding,           :type => Boolean, :default => false
   field :searching_for_funding, :type => Boolean, :default => false 
   field :is_hiring,             :type => Boolean, :default => false
@@ -23,6 +27,8 @@ class Company
   field :not_found,     :type => Boolean, :default => true
   field :lonlat,        :type => Array
   field :disabled,      :type => Boolean, :default => false
+  
+  field :company_size,  :type => Integer, :default => 0
   
   mount_uploader :logo, LogoUploader
   
