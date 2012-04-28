@@ -44,9 +44,14 @@ end
 gem 'jquery-rails'
 
 group :test do
-  gem 'rspec', '~> 2.9'
-  gem 'mocha', '~> 0.11'
-  gem 'factory_girl', '~> 3.2'
-  gem 'capybara', '~> 1.1'
-  gem 'capybara-webkit', '~> 0.11'
+  gem "mocha", "~> 0.10"
+  gem "factory_girl_rails", "~> 1.7", require: false
+  gem "database_cleaner", "~> 0.7"
+end
+
+group :development, :test do
+  gem "rspec-rails", "~> 2.8"
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "debugger"
 end
