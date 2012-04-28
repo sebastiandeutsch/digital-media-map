@@ -1,17 +1,17 @@
-companies: 
-  - 
+companies:
+  -
     name: foo
-    pitch: 
+    pitch:
     address:
     url:
     email:
-    category: 
+    category:
     sub_categories:
       - foo
       - bar
-  - 
+  -
     name: foo
-    pitch: 
+    pitch:
     address:
     url:
     email:

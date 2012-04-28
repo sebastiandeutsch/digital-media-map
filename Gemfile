@@ -49,6 +49,7 @@ group :test do
   gem "mocha", "~> 0.10"
   gem "factory_girl_rails", "~> 1.7", require: false
   gem "database_cleaner", "~> 0.7"
+  gem 'mongoid-rspec'
 end
 
 group :development, :test do

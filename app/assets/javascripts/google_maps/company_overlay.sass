@@ -1,0 +1,11 @@
+CompanyOverlay(bounds, image, map) ->
+  @bounds_ = bounds
+  @image_ = image
+  @map_ = map
+
+  @div_ = null
+  @setMap(@map_)
+
+  return
+
+CompanyOverlay.prototype = new google.maps.OverlayView()

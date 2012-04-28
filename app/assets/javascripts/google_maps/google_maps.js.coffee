@@ -7,6 +7,6 @@ window.GoogleMaps = class
       zoom: 8
       center: center,
       mapTypeId: google.maps.MapTypeId.ROADMAP
-    
+
     map = new google.maps.Map(document.getElementById(id), options)
     return map
