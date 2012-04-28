@@ -2,8 +2,6 @@ class Category < ActiveRecord::Base
   has_many :companies
   has_many :tags
 
-  #field :name, type: String
-
+  attr_accessible :name
   validates :name, presence: true
-
 end
