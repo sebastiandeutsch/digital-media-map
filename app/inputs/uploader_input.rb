@@ -14,7 +14,7 @@
 #  * Override existing file display and links using `existing_html` and `existing_link_html` (like `wrapper_html`).
 #
 # Example: `form.input :file, as: "uploader"`
-# 
+#
 # Copyright (c) Samuel Cochran 2012, under the [MIT license](http://www.opensource.org/licenses/mit-license).
 class UploaderInput < Formtastic::Inputs::FileInput
   def linkable?

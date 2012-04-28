@@ -19,7 +19,7 @@ class LogoUploader < CarrierWave::Uploader::Base
   def store_dir
     "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-  
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   def default_url
     asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
@@ -36,7 +36,7 @@ class LogoUploader < CarrierWave::Uploader::Base
   version :square do
     process :resize_to_fill => [50, 50]
   end
-  
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list

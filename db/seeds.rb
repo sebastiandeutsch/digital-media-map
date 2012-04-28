@@ -11,5 +11,5 @@ companies.each do |company|
   tags = company.delete("sub_categories")
   category = company.delete("category")
   company = Company.build(company)
-   
+
 end
