@@ -3,6 +3,8 @@
 #filter-panel
   = form_for @search, :url => companies_url do |f|
     %ul
+      %li
+        = f.text_field :name_contains
       - Category.all.each do |category|
         %li
           = category.name
