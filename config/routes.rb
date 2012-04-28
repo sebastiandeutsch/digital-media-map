@@ -1,7 +1,5 @@
 DigitalMediaMap::Application.routes.draw do
   
-  match "/imprint", :to => "home#imprint"
-  match "/about", :to => "home#about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -51,7 +49,8 @@ DigitalMediaMap::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  match 'about' => 'pages#about'
+  match "/imprint", :to => "pages#imprint"
+  match "/about", :to => "pages#about"
   root to: "home#index"
 
   # See how all your routes lay out with "rake routes"
