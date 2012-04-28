@@ -16,14 +16,14 @@ class AddCompany < ActiveRecord::Migration
       t.string :twitter_url
       t.string :rss_url
 
-      t.boolean :has_funding
-      t.boolean :searches_for_funding
-      t.boolean :is_hiring
+      t.boolean :has_funding, :default => false
+      t.boolean :searches_for_funding, :default => false
+      t.boolean :is_hiring, :default => false
 
       t.integer :company_size
 
-      t.boolean :not_found
-      t.boolean :disabled
+      t.boolean :not_found, :default => false
+      t.boolean :disabled, :default => false
 
       t.float :lon
       t.float :lat
