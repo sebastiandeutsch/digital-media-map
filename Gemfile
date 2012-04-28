@@ -28,7 +28,7 @@ gem 'yajl-ruby'
 group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
-  gem 'ruby-debug'
+  gem 'debugger'
   gem 'unicorn'
 end
 
@@ -42,3 +42,11 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'rspec', '~> 2.9'
+  gem 'mocha', '~> 0.11'
+  gem 'factory_girl', '~> 3.2'
+  gem 'capybara', '~> 1.1'
+  gem 'capybara-webkit', '~> 0.11'
+end
