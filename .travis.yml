@@ -1,5 +1,6 @@
 # https://github.com/travis-ci/travis-ci/wiki/.travis.yml-options
 language: "ruby"
+before_script: "bundle exec rake db:migrate"
 script: "bundle exec rake"
 rvm:
   - 1.9.3
