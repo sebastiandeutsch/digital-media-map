@@ -5,11 +5,13 @@
 
 # start the app
 jQuery ($) ->
-  map = new GoogleMaps('map-canvas')
-
+  window.map = new GoogleMaps('map-canvas')
+  window.markers = []
+  
   $.getJSON '/companies.json', (data) ->
     for startup in data
       markerWithPopup = new MarkerWithPopup(map, startup)
+      window.markers.push(markerWithPopup.marker)
     return
   return
 

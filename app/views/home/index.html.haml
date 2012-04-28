@@ -1,2 +1,24 @@
 = render :partial => 'shared/header'
 #map-canvas
+#filter-panel
+  = form_for @search, :url => companies_url do |f|
+    %ul
+      %li
+        = f.text_field :name_contains
+      - Category.all.each do |category|
+        %li
+          = category.name
+          %ul
+            - category.tags.each do |tag|
+              %li
+                = tag.name
+                = check_box_tag "search[tags_id_in][]", tag.id
+      %li
+        = f.label :has_funding_equals
+        = f.check_box :has_funding_equals
+      %li
+        = f.label :searches_for_funding_equals
+        = f.check_box :searches_for_funding_equals
+      %li
+        = f.label :is_hiring_equals
+        = f.check_box :is_hiring_equals
