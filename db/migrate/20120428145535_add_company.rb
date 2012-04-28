@@ -2,8 +2,8 @@ class AddCompany < ActiveRecord::Migration
   def change
     create_table :companies do |t|
       t.integer :category_id
-        t.string :name
-        t.string :description
+      t.string :name
+      t.string :description
       t.string :street
       t.string :zip
       t.string :city

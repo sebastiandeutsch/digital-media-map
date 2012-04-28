@@ -16,7 +16,7 @@ class Company < ActiveRecord::Base
     true
   rescue
     self.not_found = true
-    false
+    true  #TODO fuckme :-)
   end
 
   def address

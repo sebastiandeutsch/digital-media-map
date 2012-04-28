@@ -4,6 +4,9 @@ gem "rails", "3.2.3"
 gem "json"
 gem 'sqlite3'
 
+# search
+gem 'meta_search'
+
 # image uploading
 gem "carrierwave"
 gem "mini_magick"
