@@ -2,6 +2,10 @@ class Company
   include Mongoid::Document
   include Mongoid::Timestamps
   
+  
+  belongs_to :category
+  has_many :tags
+  
   field :name,          :type => String
   field :description,   :type => String
   field :street,        :type => String
