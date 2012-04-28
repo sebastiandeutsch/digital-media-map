@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.google.com/maps/geo?key=&output=csv&q=UnknownStreet%2013,%20123456%20Nups
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Vary:
+      - Accept-Language
+      Date:
+      - Sat, 28 Apr 2012 12:39:29 GMT
+      Server:
+      - mafe
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: '602,0,0,0'
+    http_version: 
+  recorded_at: Sat, 28 Apr 2012 12:39:29 GMT
+recorded_with: VCR 2.1.1
