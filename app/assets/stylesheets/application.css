@@ -50,11 +50,17 @@ body {
 h1, h2, h3, h4 {
   font-weight:400;
 }
+a, a:link, a:active, a:visited, a:hover {
+  color:#878787;
+}
 p {
   line-height:22px;
   font-size:13px;
   margin:0 0 20px 0;
   padding:0;
+}
+p.br {
+  margin:0;
 }
 ul {
   margin:0;
@@ -65,7 +71,7 @@ ul li {
 }
 header {
   display:block;
-  padding:10px;
+  padding:10px 0;
   width:100%;
   background-color:#fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#fff));
@@ -84,7 +90,7 @@ header h1 {
   font-size:32px;
   font-family:'ConduitITCBold';
   margin:0;
-  padding:0;
+  padding:0 0 0 10px;
   float:left;
 }
 ul#nav {
