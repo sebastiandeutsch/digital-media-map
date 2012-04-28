@@ -1,7 +1,6 @@
 require 'net/http'
 
 module GoogleMaps
-
   class QueryError < RuntimeError; end #the query could not be fulfilled. all error classes derive from this
   class QueryingProblem < QueryError; end
   class NoResultKnown < QueryError; end
@@ -26,7 +25,6 @@ module GoogleMaps
   G_GEO_UNAVAILABLE_ADDRESS = "603"
   G_GEO_BAD_KEY = "610"
   G_GEO_TOO_MANY_QUERIES = "620"
-
 
   def self.query_for_lonlat(what, options = {})
     options = CONFIG.merge options.merge({ :output_format => 'csv'})
@@ -55,4 +53,5 @@ module GoogleMaps
     url += "&key=#{options[:api_key]}"
     return url
   end
+
 end

@@ -16,7 +16,7 @@ Devise.setup do |config|
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
-  require 'devise/orm/mongoid'
+  require 'devise/orm/active_record'
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -85,7 +85,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "0e87c405e0cc70fb864e8e95ef8144581e43a7d978ad5c6df43e1040cdff53fb7ece0f2a450e7853246da179e5bd5254f90b0c46af73c674e850674475f81de0"
+  # config.pepper = "9b775436d3eb3b46eb61601cadb3ace1c298aa1bc9b66ae71842e5d88266373c4970c0f07b39b0fc898dfba157b6d2ea6eb4e9d983bdf8ab2c753138222ae106"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without

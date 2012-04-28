@@ -1,9 +1,6 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path("../boot", __FILE__)
 
-require 'action_controller/railtie'
-require 'action_mailer/railtie'
-require 'active_resource/railtie'
-require 'mongoid/railtie'
+require "rails/all"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -30,19 +27,24 @@ module DigitalMediaMap
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    # config.time_zone = "Central Time (US & Canada)"
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    # config.i18n.load_path += Dir[Rails.root.join("my", "locales", "*.{rb,yml}").to_s]
     # config.i18n.default_locale = :de
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
+    # Enforce whitelist mode for mass assignment.
+    # This will create an empty whitelist of attributes available for mass-assignment for all models
+    # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
+    # parameters by using an attr_accessible or attr_protected declaration.
+    config.active_record.whitelist_attributes = true
+
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     config.generators do |g|
-      g.orm                 :mongoid
       g.template_engine     :haml
       g.test_framework      :rspec
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
@@ -52,6 +54,6 @@ module DigitalMediaMap
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = "1.0"
   end
 end

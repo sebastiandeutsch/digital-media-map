@@ -1,47 +1,41 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rails', '3.2.3'
-gem 'json'
-
-# mongoid
-gem 'bson_ext'
-gem 'mongoid'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'kaminari'
+gem "rails", "3.2.3"
+gem "json"
+gem 'sqlite3'
 
 # image uploading
-gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
-gem 'mini_magick'
+gem "carrierwave"
+gem "mini_magick"
 
 # haml & sass
-gem 'haml'
-gem 'formtastic', '~> 2.2.0'
+gem "haml"
+gem "formtastic", "~> 2.2.0"
 
 # auth
-gem 'devise'
+gem "devise"
 
 # api
-gem 'rabl'
-gem 'yajl-ruby'
+gem "rabl"
+gem "yajl-ruby"
 
 group :development do
-  gem 'capistrano'
-  gem 'capistrano-ext'
-  gem 'debugger'
-  gem 'unicorn'
+  gem "capistrano"
+  gem "capistrano-ext"
+  gem "debugger"
+  gem "unicorn"
 end
 
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'compass',      '0.12.alpha.1'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem "sass-rails",   "~> 3.2.3"
+  gem "compass",      "0.12.alpha.1"
+  gem "coffee-rails", "~> 3.2.1"
 
-  gem 'therubyracer', :platform => :ruby
-  gem 'uglifier', '>= 1.0.3'
+  gem "therubyracer", :platform => :ruby
+  gem "uglifier", ">= 1.0.3"
 end
 
-gem 'jquery-rails'
+gem "jquery-rails"
 
 group :test do
   gem "vcr", "~> 2.1"
@@ -49,7 +43,7 @@ group :test do
   gem "mocha", "~> 0.10"
   gem "factory_girl_rails", "~> 1.7", require: false
   gem "database_cleaner", "~> 0.7"
-  gem 'mongoid-rspec'
+  gem "shoulda-matchers"
 end
 
 group :development, :test do

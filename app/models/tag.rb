@@ -1,10 +1,6 @@
-class Tag
-  include Mongoid::Document
-
-  has_and_belongs_to_many :companies
-
-  field :name, type: String
+class Tag < ActiveRecord::Base
+  has_many :taggings
+  belongs_to :category
 
   validates :name, presence: true
-
 end
