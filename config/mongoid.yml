@@ -1,0 +1,20 @@
+<% appname = "digital_media_map" %>
+
+defaults: &defaults
+  host: localhost
+
+development:
+  <<: *defaults
+  database: <%= appname %>_development
+
+test:
+  <<: *defaults
+  database: <%= appname %>_test
+
+staging:
+  <<: *defaults
+  database: <%= appname %>_staging
+
+production:
+  <<: *defaults
+  database: <%= appname %>
