@@ -2,6 +2,8 @@
 require 'spec_helper'
 
 describe GoogleMaps do
+  use_vcr_cassette
+  
   it "should query for a longitude and latitude" do
     lonlat = GoogleMaps.query_for_lonlat("Kortumstraße 19-21, 44789 Bochum")
     lonlat.first.should == 7.21643
