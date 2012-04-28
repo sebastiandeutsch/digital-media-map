@@ -4,7 +4,8 @@ class Company
   
   
   belongs_to :category
-  has_many :tags
+  has_and_belongs_to_many :tags
+  
   
   field :name,          :type => String
   field :description,   :type => String
@@ -24,6 +25,8 @@ class Company
   field :lonlat,        :type => Array
   field :disabled,      :type => Boolean, :default => false
   
+  field :tag_names,     :type => Array
+  
   mount_uploader :logo, LogoUploader
   
   validates_presence_of :name, :description, :street, :zip, :city, :email
@@ -31,6 +34,11 @@ class Company
   QUERY_API = GoogleMaps
   
   before_save :query_for_lonlat
+  
+  def self.search(args)
+    
+  end
+
   def query_for_lonlat
     begin
       lonlat = QUERY_API.query_for_lonlat(self.address, options = {})

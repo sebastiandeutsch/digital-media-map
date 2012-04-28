@@ -1,7 +1,7 @@
 class Tag
   include Mongoid::Document
   
-  has_many :companies
+  has_and_belongs_to_many :companies
 
   field :name, type: String
   
