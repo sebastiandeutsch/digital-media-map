@@ -1,3 +1,6 @@
+@import "compass/utilities/general/clearfix"
+@import "compass/css3/gradient"
+
 html, body
   margin: 0
   padding: 0
@@ -9,3 +12,26 @@ html, body
   top: 48px
   width: 100%
   height: 100%
+
+.company-overlay
+  position: absolute
+  border: 1px solid #a7a7a7
+  width: 300px
+  height: 400px
+  position: absolute
+  +linear-gradient(color-stops(#e8e8e8, #ffffff))
+
+.company-overlay-container
+  position: relative
+
+.company-overlay-content
+  position: absolute
+  margin: 5px
+
+.company-overlay-arrow
+  position: absolute
+  background: transparent url(asset_path('overlay-arrow.png', image)) top left no-repeat
+  left: 154px
+  top: 400px
+  width: 39px
+  height: 21px
