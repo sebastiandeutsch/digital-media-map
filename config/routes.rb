@@ -1,4 +1,7 @@
 DigitalMediaMap::Application.routes.draw do
+  
+  match "/imprint", :to => "home#imprint"
+  match "/about", :to => "home#about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
