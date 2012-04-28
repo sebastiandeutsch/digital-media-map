@@ -1,0 +1,14 @@
+= semantic_form_for(@company) do |f|
+  = f.inputs :name => "Basic" do
+    = f.input :name
+    = f.input :description
+    = f.input :street
+    = f.input :zip
+    = f.input :city
+    = f.input :url
+    = f.input :email
+    = f.input :logo, :as => "uploader"
+  
+  = f.actions do
+    = f.action :submit, :as => :button
+    = f.action :cancel, :as => :link

@@ -1,0 +1,20 @@
+#content
+  %h1
+    Here comes a list
+    .functions
+      = link_to "Neues Startup hinzufügen", new_company_path
+  %table
+    %thead
+      %tr
+        %th
+          Name
+    %tbody
+      - @companies.each do |company|
+        %tr
+          %td
+            = link_to company.name, company_path(company)
+          %td
+            = company.city
+          %td
+            = company.lonlat.first
+            = company.lonlat.second
