@@ -13,3 +13,12 @@
               %li
                 = tag.name
                 = check_box_tag "search[tags_id_in][]", tag.id
+      %li
+        = f.label :has_funding_equals
+        = f.check_box :has_funding_equals
+      %li
+        = f.label :searches_for_funding_equals
+        = f.check_box :searches_for_funding_equals
+      %li
+        = f.label :is_hiring_equals
+        = f.check_box :is_hiring_equals
