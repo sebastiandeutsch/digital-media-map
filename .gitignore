@@ -1,0 +1,10 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+public/system
+public/system_test
+public/assets
+.DS_Store
+public/sitemap*.xml.gz
