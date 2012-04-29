@@ -8,8 +8,33 @@ jQuery ($) ->
   if $('#map-canvas').size() == 0
     $('#company_category_id').on "change", (event) ->
       $(".tags_for_category").hide()
+      $(".tags_for_category input").attr("checked", false)
       $("#tags_for_category-#{$(this).val()}").show()
   else
+    getInnerDimensions = () ->
+      myWidth = 0
+      myHeight = 0
+      if( typeof( window.innerWidth ) == 'number' )
+        myWidth = window.innerWidth
+        myHeight = window.innerHeight
+      else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) )
+        myWidth = document.documentElement.clientWidth
+        myHeight = document.documentElement.clientHeight
+      else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) )
+        myWidth = document.body.clientWidth
+        myHeight = document.body.clientHeight
+        
+      return { width : myWidth, height : myHeight }
+    
+    resizeMap = () ->
+      windowSize = getInnerDimensions()
+      $('#map-canvas').css('width', (windowSize.width - 299) + 'px')
+    
+    resizeMap()
+    $(window).resize () ->
+      resizeMap()
+      return true
+    
     window.map = new GoogleMaps('map-canvas')
     window.markers = []
   
