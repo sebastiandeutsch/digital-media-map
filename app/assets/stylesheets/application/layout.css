@@ -76,15 +76,24 @@ header h1 {
 }
 ul#nav {
   float:left;
+  margin-left: 20px;
 }
 ul#nav li {
   float:left;
-  padding:11px 0 0 20px;
+  padding: 10px;
   font-size:13px;
+  border-radius:7px;
+  margin-right: 20px;
 }
 ul#nav li a, ul#nav li a:link, ul#nav li a:active, ul#nav li a:visited {
   text-decoration:none;
   color:#b7b7b7;
+}
+ul#nav li.active {
+  background: #13a2df;
+}
+ul#nav li.active a{
+  color: #fff;
 }
 .clearfix {
   display: inline-block;

@@ -2,11 +2,29 @@
   %h1#logo
     = link_to 'Digital Media Map // NRW', root_path
   %ul#nav
-    %li
-      %a{:title => "Karte", :href => root_path } » Karte
-    %li
-      %a{:title => "Liste", :href => companies_path } » Liste
-    %li
-      %a{:title => "Über uns", :href => about_path } » Über uns
-    %li
-      %a{:title => "Impressum", :href => imprint_path } » Impressum
+    - if controller.controller_name == 'home'
+      %li.active
+        %a{:title => "Karte", :href => root_path } » Map
+    - else
+      %li
+        %a{:title => "Karte", :href => root_path } » Map
+    
+    - if controller.controller_name == 'companies'
+      %li.active
+        %a{:title => "Liste", :href => companies_path } » List
+    - else
+      %li
+        %a{:title => "Liste", :href => companies_path } » List
+    
+    - if controller.controller_name == 'pages' and controller.action_name == 'about'
+      %li.active
+        %a{:title => "Über uns", :href => about_path } » About us
+    - else
+      %li
+        %a{:title => "Über uns", :href => about_path } » About us
+    - if controller.controller_name == 'pages' and controller.action_name == 'imprint'
+      %li.active
+        %a{:title => "Impressum", :href => imprint_path } » Imprint
+    - else
+      %li
+        %a{:title => "Impressum", :href => imprint_path } » Imprint
