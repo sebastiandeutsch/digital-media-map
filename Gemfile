@@ -23,7 +23,7 @@ gem "rabl"
 gem "yajl-ruby"
 
 # admin
-gem 'activeadmin'
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
 gem "meta_search"
 
 gem "jquery-rails"
