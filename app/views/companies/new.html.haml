@@ -1,5 +1,18 @@
 = render :partial => 'shared/header'
-#content
+#container
   %h1
     Create a new company
-  = render :partial => 'form'
+  %h3
+    Allgemeine Informationen
+  #content
+    = render :partial => 'form'
+  
+  %ul.sidebar.companies-new
+    %li
+      %h4
+        Überschrift 1
+      %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+    %li
+      %h4
+        Überschrift 2
+      %p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
