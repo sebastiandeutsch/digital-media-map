@@ -26,6 +26,22 @@
     = f.input :has_funding, :label => "We are funded"
     = f.input :searches_for_funding, :label => "We are looking for funding"
 
+  %h3
+    Company Size
+  %ul#company-sizes
+    %li#startup
+      = image_tag 'company-size-startup.png'
+      = f.radio_button :company_size, 1, :id => "company_size_1"
+    %li#small
+      = image_tag 'company-size-small.png'
+      = f.radio_button :company_size, 2, :id => "company_size_2"
+    %li#medium
+      = image_tag 'company-size-medium.png'
+      = f.radio_button :company_size, 3, :id => "company_size_3"
+    %li#large
+      = image_tag 'company-size-large.png'
+      = f.radio_button :company_size, 4, :id => "company_size_4"
+
   %h3 Links
   = f.inputs :name => "Links" do
     = f.input :facebook_url
