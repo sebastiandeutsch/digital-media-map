@@ -74,6 +74,9 @@ header h1 {
   padding:0 0 0 10px;
   float:left;
 }
+.imprint a {
+  color:#13a2df;
+}
 ul#nav {
   float:left;
   margin-left: 20px;

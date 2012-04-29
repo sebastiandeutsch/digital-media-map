@@ -26,6 +26,27 @@
                   %a.switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#search_tag_id_#{tag.id}" }
                     = image_tag 'switch-on.png'
     %h2
+      Filter
+    %ul#switches
+      %li.category
+        .padding
+          %h3
+            Has funding
+          %a.switch{ :href => '#', :'data-value' => 'off', :'data-target' => "#search_has_funding_search_filter" }
+            = image_tag 'switch-off.png'
+      %li.category
+        .padding
+          %h3
+            Searches for funding
+          %a.switch{ :href => '#', :'data-value' => 'off', :'data-target' => "#search_searches_for_funding_search_filter" }
+            = image_tag 'switch-off.png'
+      %li.category
+        .padding
+          %h3
+            Is hiring
+          %a.switch{ :href => '#', :'data-value' => 'off', :'data-target' => "#search_is_hiring_search_filter" }
+            = image_tag 'switch-off.png'
+    %h2
       Company Size
     %ul#company-sizes
       %li#startup
@@ -40,7 +61,7 @@
       %li#large
         %a{ :href => '#', :'data-value' => 'on', :'data-target' => '#company_size_4', :'data-on-image' => '/assets/company-size-large-selected.png', :'data-off-image' => '/assets/company-size-large.png' }
           = image_tag 'company-size-large-selected.png'
-    %ul
+    %ul.hide
       - Category.all.each do |category|
         %li
           = category.name
