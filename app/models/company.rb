@@ -1,3 +1,7 @@
+MetaSearch::Where.add :search_filter,
+  :formatter => Proc.new {|param| param },
+  :validator => Proc.new {|param| param }
+  
 class Company < ActiveRecord::Base
   belongs_to :category
   has_many :taggings

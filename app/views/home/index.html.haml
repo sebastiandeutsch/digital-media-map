@@ -33,11 +33,11 @@
                 = tag.name
                 = check_box_tag "search[tags_id_in][]", tag.id, false, :id => "search_tag_id_#{tag.id}"
       %li
-        = f.label :has_funding_equals
-        = f.check_box :has_funding_equals
+        = f.label :has_funding_search_filter
+        = f.check_box :has_funding_search_filter
       %li
-        = f.label :searches_for_funding_equals
-        = f.check_box :searches_for_funding_equals
+        = f.label :searches_for_funding_search_filter
+        = f.check_box :searches_for_funding_search_filter
       %li
-        = f.label :is_hiring_equals
-        = f.check_box :is_hiring_equals
+        = f.label :is_hiring_search_filter
+        = f.check_box :is_hiring_search_filter
