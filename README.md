@@ -5,3 +5,24 @@ Digital Media Map [![Build Status](https://secure.travis-ci.org/sebastiandeutsch
 Idee von: Marc Ziegler, Nadia Zaboura und Sebastian Lautwein, Mediencluster NRW
 
 London hat es, Stockholm oder Brisbane: eine Map, auf der alle relevanten Digital Media Unternehmen zu sehen sind. Mit Filter nach Branchen (eCommerce, Games, Search, Web Agencies, you name it). Und guten Kontaktinfos, damit die Unternehmen gut gefunden werden für Partnerschaften und Aufträge. Und neben der Selbstdarstellung endlich auch mal auf einen Blick die wichtigen Services, die für Digital Media Firmen relevant sind (Rechtsberatung, Investoren, etc.). Und alles das mit einem richtig guten UI. Das brauchen wir für NRW.
+
+=================
+
+Sprint:
+
+- Deploy to Heroku
+- Suche muss gestyled werden (Sebastian D.)
+- Formular für Neueintrag (Bumi)
+  - Kategorien
+  - Unterkategorien
+  - Checkboxen
+    - Has funding
+    - Searches for funding
+    - Is hiring
+    - Searches
+    - Provides
+    - Social Media URLs
+    - Company Size
+  - Model
+- Unternehmensinfos einbauen
+- Pin austauschen
