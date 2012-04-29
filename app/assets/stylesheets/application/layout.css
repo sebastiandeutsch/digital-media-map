@@ -249,7 +249,7 @@ fieldset {
   margin:0;
 }
 form button, 
-form li a {
+form li a.button {
   cursor:pointer;
   position:relative;
   float:right;
