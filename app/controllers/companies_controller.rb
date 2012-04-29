@@ -18,29 +18,20 @@ class CompaniesController < ApplicationController
 
   def create
     @company = Company.new(params[:company])
-    if @company.save()
-      redirect_to :back, :notice => 'Company updated'
+    if @company.save
+      redirect_to @company
     else
-      redirect_to :back, :error => 'Could not update Company'
+      render :new
     end
   end
 
   def update
     @company = Company.find(params[:id])
-    
-    if @company.update_attributes(params[:company])
-      redirect_to companies_path, :notice => 'Company updated'
-    else
-      redirect_to :back, :error => 'Could not update Company'
-    end
-  end
 
-  def destroy
-    @company = Company.find(params[:id])
-    if @company.destroy
-      redirect_to :back, :notice => 'Company deleted'
+    if @company.update_attributes(params[:company])
+      redirect_to @company
     else
-      redirect_to :back, :error => 'Could not delete Company'
+      render :edit
     end
   end
 end
