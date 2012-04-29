@@ -212,6 +212,9 @@ tr {
   background-image:         linear-gradient(to bottom, #e7e7e7, #fff);
 }
 
+.hide {
+  display: none;
+}
 thead {
   margin:0;
   padding:0;
