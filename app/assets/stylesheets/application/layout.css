@@ -69,7 +69,7 @@ header h1 {
   text-transform:uppercase;
   color:#13a2df;
   font-size:32px;
-  font-family:'ConduitITCBold';
+  font-family:'ConduitITCBold', Helvetica, Arial;
   margin:0;
   padding:0 0 0 10px;
   float:left;
