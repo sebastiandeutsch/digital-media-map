@@ -29,8 +29,8 @@ gem "meta_search"
 gem "jquery-rails"
 
 group :assets do
-  gem "sass-rails",   "~> 3.2.3"
-  gem "compass",      "0.12.alpha.1"
+  gem "sass-rails",   "~> 3.2.5"
+  gem "compass-rails", "~> 1.0.1"
   gem "coffee-rails", "~> 3.2.1"
   gem "therubyracer", :platform => :ruby
   gem "uglifier", ">= 1.0.3"
