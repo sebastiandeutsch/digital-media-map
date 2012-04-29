@@ -2,6 +2,24 @@
 #map-canvas
 #filter-panel
   = form_for @search, :url => companies_url do |f|
+    %ul#switches
+      - Category.all.each do |category|
+        %li.category
+          .padding
+            %h3
+              %a.menu{ :href => '#', :'data-target' => "#category_#{category.id}" }
+                = category.name
+            %a.switch{ :href => '#', :'data-value' => 'on' }
+              = image_tag 'switch-on.png'
+        %li{ :id => "category_#{category.id}", :style => 'display:none' }
+          %ul
+            - category.tags.each do |tag|
+              %li
+                .padding
+                  %h4
+                    = tag.name
+                  %a.switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#search_tag_id_#{tag.id}" }
+                    = image_tag 'switch-on.png'
     %ul
       %li
         = f.text_field :name_contains
@@ -12,7 +30,7 @@
             - category.tags.each do |tag|
               %li
                 = tag.name
-                = check_box_tag "search[tags_id_in][]", tag.id
+                = check_box_tag "search[tags_id_in][]", tag.id, false, :id => "search_tag_id_#{tag.id}"
       %li
         = f.label :has_funding_equals
         = f.check_box :has_funding_equals
