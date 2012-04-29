@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "3.2.3"
 gem "json"
-gem 'sqlite3'
+gem "unicorn"
 
 # search
 gem 'meta_search'
@@ -26,23 +26,30 @@ gem "yajl-ruby"
 gem 'activeadmin'
 gem "meta_search"
 
-group :development do
-  gem "capistrano"
-  gem "capistrano-ext"
-  gem "debugger"
-  gem "unicorn"
-end
+gem "jquery-rails"
 
 group :assets do
   gem "sass-rails",   "~> 3.2.3"
   gem "compass",      "0.12.alpha.1"
   gem "coffee-rails", "~> 3.2.1"
-
   gem "therubyracer", :platform => :ruby
   gem "uglifier", ">= 1.0.3"
 end
 
-gem "jquery-rails"
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+  gem "rspec-rails", "~> 2.8"
+  gem "capybara"
+  gem "capybara-webkit"
+  gem "debugger"
+end
+
+group :development do
+  gem 'heroku'
+end
 
 group :test do
   gem "vcr", "~> 2.1"
@@ -51,11 +58,4 @@ group :test do
   gem "factory_girl_rails", "~> 1.7", require: false
   gem "database_cleaner", "~> 0.7"
   gem "shoulda-matchers"
-end
-
-group :development, :test do
-  gem "rspec-rails", "~> 2.8"
-  gem "capybara"
-  gem "capybara-webkit"
-  gem "debugger"
 end

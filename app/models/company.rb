@@ -9,6 +9,8 @@ class Company < ActiveRecord::Base
 
   before_save :query_for_lonlat
   before_create :insert_private_slug
+  after_create :notify_company
+  
   
   QUERY_API = GoogleMaps
   
@@ -30,5 +32,9 @@ class Company < ActiveRecord::Base
 
   def insert_private_slug
     self.private_slug = SecureRandom.hex(12)
+  end
+
+  def notify_company
+    
   end
 end
