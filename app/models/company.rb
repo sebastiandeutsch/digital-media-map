@@ -10,13 +10,16 @@ class Company < ActiveRecord::Base
   before_save :query_for_lonlat
   before_create :insert_private_slug
   after_create :notify_company
-  
-  
+
   QUERY_API = GoogleMaps
-  
+
+  def address
+    "#{self.street}, #{self.zip} #{self.city}"
+  end
+
   def query_for_lonlat
     lonlat = QUERY_API.query_for_lonlat(self.address, options = {})
-    
+
     self.lon = lonlat.first
     self.lat = lonlat.second
     self.not_found = false
@@ -26,15 +29,12 @@ class Company < ActiveRecord::Base
     true
   end
 
-  def address
-    "#{self.street}, #{self.zip} #{self.city}"
-  end
-
   def insert_private_slug
     self.private_slug = SecureRandom.hex(12)
   end
 
   def notify_company
-    
+
   end
+
 end
