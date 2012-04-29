@@ -18,6 +18,33 @@ jQuery ($) ->
     
     return false
   
+  $('.category-switch').on "click", (event) ->
+    data_target = $(this).attr('data-target')
+    if $(this).attr('data-value') == 'on'
+      $('img', $(this)).attr('src', '/assets/switch-off.png')
+      $(this).attr('data-value', 'off')
+      state = off
+    else
+      $('img', $(this)).attr('src', '/assets/switch-on.png')
+      $(this).attr('data-value', 'on')
+      state = on
+    
+    $('.switch', data_target).each (i, el) ->
+      link = $(el)
+      data_target = $(link).attr('data-target')
+      if state == on
+        $('img', link).attr('src', '/assets/switch-on.png')
+        $(link).attr('data-value', 'on')
+        $(data_target).attr('checked', true);
+      else
+        $('img', link).attr('src', '/assets/switch-off.png')
+        $(link).attr('data-value', 'off')
+        $(data_target).attr('checked', false);
+      
+      return
+    
+    return false
+  
   $('.switch').on "click", (event) ->
     data_target = $(this).attr('data-target')
     

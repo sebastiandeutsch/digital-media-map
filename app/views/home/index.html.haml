@@ -9,7 +9,7 @@
             %h3
               %a.menu{ :href => '#', :'data-target' => "#category_#{category.id}" }
                 = category.name
-            %a.switch{ :href => '#', :'data-value' => 'on' }
+            %a.category-switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#category_#{category.id}" }
               = image_tag 'switch-on.png'
         %li{ :id => "category_#{category.id}", :style => 'display:none' }
           %ul
