@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'ConduitITCBold';
     src: url('/fonts/conduititc-bold-webfont.eot');
@@ -21,10 +19,7 @@
          url('/fonts/conduititc-light-webfont.svg#ConduitITCLight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
-
-
 body {
   background:#fff;
   font-family:Arial, serif;
@@ -55,6 +50,7 @@ ul li, ol li {
   list-style-type:none;
 }
 header {
+  z-index:9999;
   display:block;
   padding:10px 0;
   width:100%;
@@ -83,7 +79,7 @@ ul#nav {
 }
 ul#nav li {
   float:left;
-  padding:12px 0 0 20px;
+  padding:11px 0 0 20px;
   font-size:13px;
 }
 ul#nav li a, ul#nav li a:link, ul#nav li a:active, ul#nav li a:visited {
@@ -93,6 +89,38 @@ ul#nav li a, ul#nav li a:link, ul#nav li a:active, ul#nav li a:visited {
 .clearfix {
   display: inline-block;
 }
+
+/* START */
+form#company_search input#search_name_contains {
+  width:205px;
+  padding:5px 5px 5px 25px;
+  color:#ababab;
+  text-decoration:none;
+  background-color:#ffffff;
+  background-image:url(/assets/search.jpg);
+  background-repeat:no-repeat;
+  background-position:6px 4px;
+  -webkit-border-radius:15px;
+  border-radius:15px;
+  -webkit-box-shadow:0px 0px 4px 0px #e2e2e2;
+  box-shadow:0px 0px 4px 0px #e2e2e2;
+}
+form#company_search li {
+  background-color:#e8e8e8;
+  overflow:hidden;
+  padding:8px;
+}
+form#company_search label {
+  width:auto;
+  float:left;
+}
+input[type="checkbox"] {
+  background-color:#000;
+  padding:0;
+  width:30px;
+  float:right;
+}
+
 #container {
   width:830px;
   padding:25px;
@@ -158,7 +186,7 @@ ul.companies-new {
         -o-transition: all 0.3s ease-out;
            transition: all 0.3s ease-out;
 }
-.functions a:hover, #company_cancel_action a:hover, form button:hover {
+.functions a:hover, form li a:hover, form button:hover {
   background-color:#239ed4;
 }
 table {
@@ -195,7 +223,7 @@ td {
 tbody tr:last-child, td:last-child {
   border:0;
 }
-form .label {
+label {
   font-size:13px;
   margin:8px 0;
   display:block;
@@ -220,7 +248,9 @@ fieldset {
   padding:0;
   margin:0;
 }
-form button, #company_cancel_action a, #company_cancel_action a:link, #company_cancel_action a:visited, #company_cancel_action a:active {
+form button, 
+form li a {
+  cursor:pointer;
   position:relative;
   float:right;
   padding:10px 45px;
@@ -238,4 +268,7 @@ form button, #company_cancel_action a, #company_cancel_action a:link, #company_c
       -ms-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
+}
+form li a:link, form li a:active, form li a:visited {
+  color:#ffffff;
 }
