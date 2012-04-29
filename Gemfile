@@ -22,6 +22,10 @@ gem "devise"
 gem "rabl"
 gem "yajl-ruby"
 
+# admin
+gem 'activeadmin'
+gem "meta_search"
+
 group :development do
   gem "capistrano"
   gem "capistrano-ext"

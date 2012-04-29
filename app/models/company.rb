@@ -5,9 +5,10 @@ class Company < ActiveRecord::Base
 
   mount_uploader :logo, LogoUploader
 
-  attr_accessible :name, :description, :street, :zip, :city, :url, :email, :searches, :provides, :facebook_url, :twitter_url, :rss_url
+  attr_accessible :name, :description, :street, :zip, :city, :url, :email, :searches, :provides, :facebook_url, :twitter_url, :rss_url, :logo
 
   before_save :query_for_lonlat
+  before_create :insert_private_slug
   
   QUERY_API = GoogleMaps
   
@@ -27,4 +28,7 @@ class Company < ActiveRecord::Base
     "#{self.street}, #{self.zip} #{self.city}"
   end
 
+  def insert_private_slug
+    self.private_slug = SecureRandom.hex(12)
+  end
 end

@@ -10,7 +10,7 @@ window.CompanyOverlay = (latLng, company, map) ->
 window.CompanyOverlay.prototype = new google.maps.OverlayView()
 window.CompanyOverlay.prototype.onAdd = () ->
   @div = jQuery("<div class=\"company-overlay\" style=\"visibility:hidden\"><div class=\"company-overlay-container\"><div class=\"company-overlay-content\">#{@company.name}</div><div class=\"company-overlay-arrow\"></div></div></div>").get(0)
-  @getPanes().overlayLayer.appendChild(@div)
+  @getPanes().floatPane.appendChild(@div)
   return
 
 window.CompanyOverlay.prototype.draw = () ->

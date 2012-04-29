@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   def index
-    # @companies = Company.search(params[:search])
-    @companies = Company.all
+    @search = Company.search(params[:search])
+    @companies = @search.all
   end
 
   def show
@@ -27,8 +27,9 @@ class CompaniesController < ApplicationController
 
   def update
     @company = Company.find(params[:id])
+    
     if @company.update_attributes(params[:company])
-      redirect_to :back, :notice => 'Company updated'
+      redirect_to companies_path, :notice => 'Company updated'
     else
       redirect_to :back, :error => 'Could not update Company'
     end
