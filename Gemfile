@@ -13,7 +13,7 @@ gem "mini_magick"
 
 # haml & sass
 gem "haml"
-gem "formtastic", "~> 2.2.0"
+gem "formtastic", "~> 2.1.1"
 
 # auth
 gem "devise"
