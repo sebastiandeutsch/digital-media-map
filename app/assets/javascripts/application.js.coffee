@@ -33,6 +33,7 @@ jQuery ($) ->
     resizeMap = () ->
       windowSize = getInnerDimensions()
       $('#map-canvas').css('width', (windowSize.width - 299) + 'px')
+      #$('#map-canvas').css('height', (windowSize.height - 0) + 'px')
     
     resizeMap()
     $(window).resize () ->
