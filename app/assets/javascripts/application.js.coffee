@@ -7,6 +7,7 @@
 jQuery ($) ->
   if $('#map-canvas').size() == 0
     $('#company_category_id').on "change", (event) ->
+      $(".tags_for_category input").checked = false
       $(".tags_for_category").hide()
       $(".tags_for_category input").attr("checked", false)
       $("#tags_for_category-#{$(this).val()}").show()
@@ -37,6 +38,7 @@ jQuery ($) ->
     
     window.map = new GoogleMaps('map-canvas')
     window.markers = []
+    window.companies = {}
   
     $('.menu').on "click", (event) ->
       data_target = $(this).attr('data-target')
@@ -74,7 +76,6 @@ jQuery ($) ->
         return
     
       return false
-  
     $('.switch').on "click", (event) ->
       data_target = $(this).attr('data-target')
     
@@ -94,9 +95,14 @@ jQuery ($) ->
       return false
   
     $.getJSON '/companies.json', (data) ->
+      window.companies = {}
       for startup in data
         markerWithPopup = new MarkerWithPopup(map, startup)
+        window.companies[startup.id] = markerWithPopup
         window.markers.push(markerWithPopup.marker)
+      company = window.companies[document.location.hash.replace("#","")]
+      company.overlay.toggle()
+    
       return
   return
 

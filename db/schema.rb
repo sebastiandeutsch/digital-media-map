@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120428211541) do
+ActiveRecord::Schema.define(:version => 20120429124136) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -61,11 +61,10 @@ ActiveRecord::Schema.define(:version => 20120428211541) do
     t.string   "city"
     t.string   "url"
     t.string   "email"
-    t.string   "searches"
-    t.string   "provides"
+    t.text     "searches",             :limit => 255
+    t.text     "provides",             :limit => 255
     t.string   "facebook_url"
     t.string   "twitter_url"
-    t.string   "rss_url"
     t.boolean  "has_funding"
     t.boolean  "searches_for_funding"
     t.boolean  "is_hiring"
@@ -74,10 +73,11 @@ ActiveRecord::Schema.define(:version => 20120428211541) do
     t.boolean  "disabled"
     t.float    "lon"
     t.float    "lat"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.string   "logo"
     t.string   "private_slug"
+    t.string   "crunchbase_url"
   end
 
   create_table "taggings", :force => true do |t|

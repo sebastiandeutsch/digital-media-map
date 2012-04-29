@@ -13,10 +13,10 @@ Sprint:
 - Deploy to Heroku
 - Suche muss gestyled werden (Sebastian D.)
 - Formular für Neueintrag (Bumi)
-  - Kategorien
-  - Unterkategorien
+  - Kategorien check
+  - Unterkategorien check
   - Checkboxen
-    - Has funding
+    - Has funding 
     - Searches for funding
     - Is hiring
     - Searches
@@ -26,3 +26,7 @@ Sprint:
   - Model
 - Unternehmensinfos einbauen
 - Pin austauschen
+
+
+- validations
+- searches/provides should be a text not a string in the DB

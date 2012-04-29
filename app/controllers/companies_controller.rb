@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    redirect_to root_url(:anchor => @company.to_param)
   end
 
   def new
