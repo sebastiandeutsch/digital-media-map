@@ -25,11 +25,13 @@ jQuery ($) ->
         
       return { width : myWidth, height : myHeight }
     
-    windowSize = getInnerDimensions()
-    $('#map-canvas').css('width', (windowSize.width - 299) + 'px')
-    $(window).resize () ->
+    resizeMap = () ->
       windowSize = getInnerDimensions()
       $('#map-canvas').css('width', (windowSize.width - 299) + 'px')
+    
+    resizeMap()
+    $(window).resize () ->
+      resizeMap()
       return true
     
     window.map = new GoogleMaps('map-canvas')
