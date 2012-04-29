@@ -18,6 +18,17 @@
     %div{ :id => "tags_for_category-#{category.id}", :class => "tags_for_category", :style => (@company.category_id == category.id ? "" : "display:none") }
       = f.input :tags, :as => :check_boxes, :collection => category.tags
 
+  = f.inputs :name => "Attributes" do
+    = f.input :has_funding
+    = f.input :searches_for_funding
+    = f.input :is_hiring
+    = f.input :searches
+    = f.input :provides
+
+  = f.inputs :name => "Links" do
+    = f.input :facebook_url
+    = f.input :twitter_url
+
   = f.actions do
     = f.action :submit, :as => :button
     = f.action :cancel, :as => :link
