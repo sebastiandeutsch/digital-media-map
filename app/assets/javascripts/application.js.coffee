@@ -3,6 +3,9 @@
 //= require_tree .
 //= require_tree ./google_maps
 
+window.every = every = (t, f) -> setInterval f, t
+window.after = after = (t, f) -> setTimeout f, t
+
 # start the app
 jQuery ($) ->
   if $('#map-canvas').size() == 0
@@ -116,7 +119,9 @@ jQuery ($) ->
         window.companies[startup.id] = markerWithPopup
         window.markers.push(markerWithPopup.marker)
       company = window.companies[document.location.hash.replace("#","")]
-      company.overlay.toggle()
+      if company
+        after 1300, ->
+          company.overlay.toggle()
     
       return
   return
