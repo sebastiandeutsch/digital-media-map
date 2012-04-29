@@ -8,6 +8,7 @@ jQuery ($) ->
   if $('#map-canvas').size() == 0
     $('#company_category_id').on "change", (event) ->
       $(".tags_for_category").hide()
+      $(".tags_for_category input").attr("checked", false)
       $("#tags_for_category-#{$(this).val()}").show()
   else
     getInnerDimensions = () ->

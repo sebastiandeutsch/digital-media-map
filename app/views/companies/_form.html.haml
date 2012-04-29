@@ -12,10 +12,10 @@
 
   %h3 Categories
   = f.inputs :name => "Categories" do
-    = f.input :category, :collection => Category.all, :include_blank => false
+    = f.input :category, :collection => Category.all
 
   - Category.all.each do |category|
-    %div{ :id => "tags_for_category-#{category.id}", :class => "tags_for_category" }
+    %div{ :id => "tags_for_category-#{category.id}", :class => "tags_for_category", :style => (@company.category_id == category.id ? "" : "display:none") }
       = f.input :tags, :as => :check_boxes, :collection => category.tags
 
   = f.actions do
