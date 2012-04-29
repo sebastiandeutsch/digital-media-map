@@ -130,6 +130,9 @@ input[type="checkbox"] {
   float:right;
 }
 
+.tags_for_category li {
+  list-style: none;
+}
 #container {
   width:830px;
   padding:25px;
@@ -141,7 +144,7 @@ input[type="checkbox"] {
   font-size:26px;
 }
 #container h3 {
-  margin:0 0 20px 0;
+  margin:30px 0 20px 0;
   font-size:20px;
 }
 #content {
@@ -244,7 +247,7 @@ label {
   margin:8px 0;
   display:block;
 }
-form input {
+form input, form textarea, form select {
   width:430px;
   padding:8px;
   border:1px solid #c7c7c7;
@@ -255,6 +258,12 @@ form input {
   background-image:     -ms-linear-gradient(top, #e7e7e7, #fff);
   background-image:      -o-linear-gradient(top, #e7e7e7, #fff);
   background-image:         linear-gradient(to bottom, #e7e7e7, #fff);
+}
+form textarea {
+  height: 100px;
+}
+form select {
+  width: 447px;
 }
 legend {
   display:none;

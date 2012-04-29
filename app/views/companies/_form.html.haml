@@ -1,5 +1,4 @@
 = semantic_form_for(@company) do |f|
-  %h3 General information
   = f.inputs :name => "Basic" do
     = f.input :name
     = f.input :description
@@ -12,7 +11,7 @@
 
   %h3 Categories
   = f.inputs :name => "Categories" do
-    = f.input :category, :collection => Category.all
+    = f.input :category, :collection => Category.all, :label => false
 
   - Category.all.each do |category|
     %div{ :id => "tags_for_category-#{category.id}", :class => "tags_for_category", :style => (@company.category_id == category.id ? "" : "display:none") }
