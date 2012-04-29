@@ -186,7 +186,7 @@ ul.companies-new {
         -o-transition: all 0.3s ease-out;
            transition: all 0.3s ease-out;
 }
-.functions a:hover, form li a:hover, form button:hover {
+.functions a:hover, form li.list_action a:hover, form button:hover {
   background-color:#239ed4;
 }
 table {
@@ -249,7 +249,7 @@ fieldset {
   margin:0;
 }
 form button, 
-form li a {
+form li.link_action a {
   cursor:pointer;
   position:relative;
   float:right;
@@ -269,6 +269,6 @@ form li a {
        -o-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
 }
-form li a:link, form li a:active, form li a:visited {
+form li.link_action a:link, form li a:active, form li a:visited {
   color:#ffffff;
 }
