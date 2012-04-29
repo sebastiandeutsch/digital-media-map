@@ -26,7 +26,7 @@ class Company < ActiveRecord::Base
     true
   rescue
     self.not_found = true
-    true  # TODO: return false for proper results
+    true
   end
 
   def insert_private_slug
