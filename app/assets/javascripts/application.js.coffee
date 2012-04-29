@@ -76,7 +76,6 @@ jQuery ($) ->
         return
     
       return false
-  
     $('.switch').on "click", (event) ->
       data_target = $(this).attr('data-target')
     

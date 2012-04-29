@@ -20,4 +20,6 @@ window.send_search_form = () ->
 jQuery ($) ->
   $('form#company_search input').change (e) ->
     send_search_form()
+  $('#search_name_contains').keyup (e) ->
+    send_search_form()
   return
