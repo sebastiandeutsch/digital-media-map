@@ -215,14 +215,22 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    sequel (3.20.0)
     shoulda-matchers (1.1.0)
       activesupport (>= 3.0.0)
+    sinatra (1.0)
+      rack (>= 1.0)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.6)
     subexec (0.2.2)
+    taps (0.3.24)
+      rack (>= 1.0.1)
+      rest-client (>= 1.4.0, < 1.7.0)
+      sequel (~> 3.20.0)
+      sinatra (~> 1.0.0)
     term-ansicolor (1.0.7)
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
@@ -278,6 +286,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.5)
   shoulda-matchers
   sqlite3
+  taps
   therubyracer
   uglifier (>= 1.0.3)
   unicorn
