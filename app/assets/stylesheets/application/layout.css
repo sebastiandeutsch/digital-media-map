@@ -147,7 +147,7 @@ input[type="checkbox"] {
   font-size:26px;
 }
 #container h3 {
-  margin:30px 0 20px 0;
+  margin:20px 0 20px 0;
   font-size:20px;
 }
 #container h4 {
@@ -187,7 +187,7 @@ ul.sidebar li p {
   margin:0;
 }
 ul.sidebar ol {
-  margin:0 0 0 20px;
+  margin:0 0 0 0px;
 }
 ul.sidebar ol li {
   background-image:none;
@@ -254,12 +254,15 @@ thead {
 
 th {
   padding:20px 20px;
+  border-right: 1px solid #c7c7c7;
+  text-align:left;
+  font-weight:700;
 }
 td {
   border-right: 1px solid #c7c7c7;
   padding: 20px;
 }
-tbody tr:last-child, td:last-child {
+tbody tr:last-child, td:last-child, th:last-child {
   border:0;
 }
 label {
