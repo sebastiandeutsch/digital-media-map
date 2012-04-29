@@ -22,11 +22,10 @@
     = f.input :searches, :maxlength => 255
     = f.input :provides, :maxlength => 255
 
-  %h3 We are
   = f.inputs :name => "Links" do
-    = f.input :is_hiring, :label => "hiring"
-    = f.input :has_funding, :label => "funded"
-    = f.input :searches_for_funding, :label => "looking for funding"
+    = f.input :is_hiring, :label => "We are hiring"
+    = f.input :has_funding, :label => "We are funded"
+    = f.input :searches_for_funding, :label => "We are looking for funding"
 
   %h3 Links
   = f.inputs :name => "Links" do
