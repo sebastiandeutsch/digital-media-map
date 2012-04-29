@@ -8,39 +8,59 @@
 
 
 
-{
-  "Advertising" => [
-      
-  ],
-  "eCommerce / eTransaction" => [
-  
-  ], 
-  "Games" => [
-  
-  ],
-  "Web & App Agency" => [
-  
-  ],
-  "Content" => [
-  
-  ], 
-  "Social Networks" => [
-  
-  ],
-  "Web Tools / Services" "Others" => [
-  
-  ]
-}.each do |category_name, tags|
-  c = Category.create :name => category_name
-  tags.each do |tag_name|
-    c.tags << Tag.create(:name => tag_name)
-  end
-end
+#{
+  #"Advertising" => [
+
+  #],
+  #"eCommerce / eTransaction" => [
+
+  #],
+  #"Games" => [
+
+  #],
+  #"Web & App Agency" => [
+
+  #],
+  #"Content" => [
+
+  #],
+  #"Social Networks" => [
+
+  #],
+  #"Web Tools / Services" "Others" => [
+
+  #]
+#}.each do |category_name, tags|
+  #c = Category.create :name => category_name
+  #tags.each do |tag_name|
+    #c.tags << Tag.create(:name => tag_name)
+  #end
+#end
+
+require 'open-uri'
 
 companies = YAML.load File.open(File.join(Rails.root, "db/seed.yml"))
-companies.each do |company|
-  tags = company.delete("sub_categories")
-  category = company.delete("category")
-  company = Company.build(company)
+companies.each do |details|
+  company = Company.new(details)
 
+  category = Category.where(:name => details["category"]).first
+  fail "No category '#{details['category']}' for '#{details['name']}'" unless category
+  company.category = category
+
+  tags = details["sub_categories"].map do |sub_cat|
+    tag = Tag.where(:name => sub_cat).first
+    fail "No tag '#{sub_cat}'' for '#{details['name']}''" unless tag
+    tag
+  end
+  company.tags = tags
+
+  company.logo = open(details["logo_url"])
+
+  begin
+    company.save!
+  rescue => e
+    puts "MAJOR LOGO FAIL:"
+    p e
+    puts "Logo URL: #{details['logo_url']}"
+  end
 end

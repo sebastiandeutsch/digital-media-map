@@ -1,21 +1,357 @@
-companies:
-  -
-    name: foo
-    pitch:
-    address:
-    url:
-    email:
-    category:
-    sub_categories:
-      - foo
-      - bar
-  -
-    name: foo
-    pitch:
-    address:
-    url:
-    email:
-    category:
-    sub_categories:
-      - foo
-      - bar
+- 
+  name: "9elements GmbH"
+  description: "9elements develops taylormade software for your business."
+  street: "Kortumstraße 19"
+  zip: "44787"
+  city: "Bochum"
+  url: "http://9elements.com"
+  email: "contact@9elements.com"
+  searches: "Developers. Developers. Developers. Developers. Developers."
+  provides: "From game development and interface design to state-of-the-art computer science research, from business programming to digital culture."
+  facebook_url: "9elements"
+  twitter_url: "9elements"
+  crunchbase_url: 
+  logo_url: "http://blog.railslove.com/wp-content/uploads/2010/09/9elements_logo.jpg"
+  has_funding: 0
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 2
+  category: "Web & App Agency"
+  sub_categories:
+    - "Full Service Web Agency"
+    - "Web Design Agency"
+    - "Mobile App Development"
+
+- 
+  name: "Railslove GmbH"
+  description: "Hello, we are Railslove. We build web applications and, well, we're kind of good at it."
+  street: "Deutz-Mülheimer Straße 129"
+  zip: "51063"
+  city: "Köln"
+  url: "http://railslove.com"
+  email: "team@railslove.com"
+  searches: "If you love challenging projects, sharing your knowledge while learning from others, we're sure you'll have a blast working with us!"
+  provides: "We are a small team of passionate hackers and thinkers creating juicy stuff for the web. And we're kind of good at it."
+  facebook_url: "Railslove"
+  twitter_url: "Railslove"
+  crunchbase_url: "railslove-gmbh"
+  logo_url: "http://railslove.com/assets/railslove-logo-175x42-7f9378b6113eb8e0a8621738aa93bec0.png"
+  has_funding: 0
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 2 
+  category: "Web & App Agency"
+  sub_categories: 
+    - "Full Service Web Agency"
+    - "Web Design Agency"
+
+- 
+  name: "MEDIEN.NRW"
+  description: "Mediencluster NRW is the central regional development agency for the expansion, marketing and internationalisation of North Rhine-Westphalia ́s media branches with a specific focus on digital media."
+  street: "Hohenzollernring 75-77"
+  zip: "50672"
+  city: "Köln"
+  url: "http://medien.nrw.de/"
+  email: "cluster@medien.nrw.de"
+  searches: "We are open for international cooperation with regards to EU projects as well as other activities ranging from networking activities over knowledge exchange to joint business collaborations."
+  provides: "Through interdisciplinary interlinkage of all media segments, Mediencluster NRW initiates a continuous dialogue across all types of media and promotes cooperation – from TV, film, radio over games, advertising, publishing to digital media as key to unlock new international value chains."
+  facebook_url: "MedienNRW"
+  twitter_url: "medienziegler"
+  crunchbase_url: 
+  logo_url: "http://medien.nrw.de/wp-content/themes/mediencluster-nrw-flag/images/logo.png"
+  has_funding: 1
+  searches_for_funding: 0
+  is_hiring: 0
+  company_size:  1
+  category: "Services"
+  sub_categories: 
+    - "Institutions"
+    
+- 
+  name: "Film- und Medienstiftung NRW"
+  description: "Founded in 1991 and with an annual funding budget of 35 million euros, the Film- und Medienstiftung NRW is the financially strongest state funding agency in Germany."
+  street: "Kaistraße 14"
+  zip: "40221"
+  city: "Düsseldorf"
+  url: "http://www.filmstiftung.de/"
+  email: "info@filmstiftung.de"
+  searches: 
+  provides: 
+  facebook_url: 
+  twitter_url: 
+  crunchbase_url: 
+  logo_url: "http://www.professional-production.de/uploads/pics/11-06-20_FilmstiftungNRW.jpg"
+  has_funding: 0
+  searches_for_funding: 0 
+  is_hiring: 1
+  company_size: 2 
+  category: "Services"
+  sub_categories: 
+    - "Institutions"
+- 
+  name: "Adcloud GmbH"
+  description: "Adcloud was founded in 2009 by the performance marketing pioneers Henning Lange and Oliver Thylmann. "
+  street: "Venloer Str. 25-27"
+  zip: "50672"
+  city: "Köln"
+  url: "http://adcloud.com/"
+  email: "info@adcloud.com"
+  searches: "Become part of our strong international team, so that we can revolutionize the dynamic advertising market together."
+  provides: "AdCloud technology offers far-reaching possibilities to form our own performance network and hence serve the needs of our customers in the best way possible."
+  facebook_url: "Adcloud"
+  twitter_url: "adcloud"
+  crunchbase_url: "adcloud-gmbh"
+  logo_url: "http://nodecamp.de/images/sponsor-adcloud.png"
+  has_funding: 1
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 2 
+  category: "Advertising"
+  sub_categories: 
+    - "Performance Advertising"
+
+- 
+  name: "pixum"
+  description: "Pixum gehört zu den führenden Anbietern von Online-Fotoservices in Deutschland und Europa."
+  street: "Industriestr. 161 "
+  zip: "50999"
+  city: ´"Köln"
+  url: "http://www.pixum.de/"
+  email: “info@pixum.com”
+  searches: 
+  provides: "Pixum druckt und belichtet ausschließlich auf hochwertigen Materialien unter Einsatz modernster und umweltschonender Drucktechnologien. "
+  facebook_url: "pixum"
+  twitter_url: "Pixum_DE"
+  crunchbase_url: 
+  logo_url: "http://www.pixum.de/assets/global/pixum_logo/pixum_logo_rgb.png"
+  has_funding: 1
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 2 
+  category: "E-Commerce / E-Transaction"
+  sub_categories: 
+    - "Classic eCommerce"
+    - "Buy / Sell Fulfillment"
+  
+- 
+  name: "Fliplife"
+  description: "Starte deine Traumkarriere und ergreife die Macht in deinem Unternehmen. Spannende Aufträge und knallharte Gegner erwarten dich!"
+  street: "Friesenplatz 16"
+  zip: "50672"
+  city: "Köln"
+  url: "http://fliplife.com/"
+  email: "info@fliplife.com"
+  searches: 
+  provides: "Fliplife bietet die aktivste und userfreundlichste Form der Werbung: das Interaction-Advertising. "
+  facebook_url: "fliplife"
+  twitter_url: "fliplife"
+  crunchbase_url: "fliplife"
+  logo_url: "http://www.eu-startups.com/wp-content/uploads/2011/02/Fliplife-logo.jpg"
+  has_funding: 1
+  searches_for_funding: 1
+  is_hiring: 1
+  company_size: 2 
+  category: "Games"
+  sub_categories: 
+    - "Browser Games"
+    - "Simulation Games"
+    - "Role-Playing Games"
+
+- 
+  name: "Simfy.de"
+  description: "simfy lets you select and play any song from an immense music catalog. Listen to as much as you like - the entire world of music - on demand."
+  street: "Vogelsanger Str. 187"
+  zip: "50825"
+  city: "Köln"
+  url: "http://www.simfy.de/"
+  email: "info@simfy.com"
+  searches: "Music (Labels & Artists)"
+  provides: "Our priority is to provide the best music service to our users. The driving force behind our successes is the team and the way we work together!"
+  facebook_url: "simfy"
+  twitter_url: "simfy"
+  crunchbase_url: "simfy"
+  logo_url: "http://www.gruenderszene.de/wp-content/uploads/2009/09/simfy-300x119.jpg"
+  has_funding: 1
+  searches_for_funding: 1
+  is_hiring: 1
+  company_size: 2
+  category: "Content"
+  sub_categories: 
+    - "Music Platform"
+    - "Content Discovery"
+  
+- 
+  name: "wer-kennt-wen.de"
+  description: "Hier triffst Du Deine ehemaligen Mitschüler, Deinen Nachbarn, Deine Vereinskameraden, Deine Eltern und Großeltern und viele mehr. "
+  street: "Moltkestr. 123-131"
+  zip: "50674"
+  city: "Köln"
+  url: "http://www.wer-kennt-wen.de/"
+  email: "info@wer-kennt-wen.de"
+  searches: "Du möchtest unser Team verstärken? Dann schau doch mal auf unsere Jobseite."
+  provides: "Bei wer-kennt-wen findest Du die Leute aus Deiner Heimat und aus Deiner Region – zum Beispiel in einer der vielen Gruppen und Schulen."
+  facebook_url: 
+  twitter_url: werkenntwen
+  crunchbase_url: 
+  logo_url: "http://static.wer-kennt-wen.de/presse/infos/logo_gross.gif"
+  has_funding: 1
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 2
+  category: "Social Networks"
+  sub_categories: 
+    - "Social Connection"
+
+- 
+  name: "SalesKing"
+  description: "Salesking ist eine Verwaltungssoftware für Unternehmer, um internetbasiert und frei individualisierbar den täglichen Umgang mit PDF-Dokumenten und Kunden zu erleichtern."
+  street: "Holbeinstr. 2"
+  zip: "50733"
+  city: "Köln"
+  url: "http://www.salesking.eu/"
+  email: info@salesking.eu
+  searches: 
+  provides: "Einfach und Fix in 5 Minuten zu Ihrer ersten Rechnung, jetzt 30 Tage kostenlos Testen."
+  facebook_url: "pages/wwwsaleskingeu/283371888107"
+  twitter_url: "SalesKing"
+  crunchbase_url: 
+  logo_url: "http://blog.railslove.com/wp-content/uploads/2010/09/salesking-logo-550x128.jpg"
+  has_funding: 0
+  searches_for_funding: 1
+  is_hiring: 1
+  company_size: 1
+  category: "Web Tools / Services"
+  sub_categories: 
+    - "Business Productivity Tools"
+
+- 
+  name: "Clickworker"
+  description: 
+  street: "Hatzper Straße 34"
+  zip: "45133"
+  city: "Essen"
+  url: "http://www.clickworker.com/"
+  email: "info-de@clickworker.com"
+  searches: "Sign up as a clickworker and start earning money now. Registration and membership are always free of charge."
+  provides: "Clickworker offers business services with speed and at scale."
+  facebook_url: "clickworkercom"
+  twitter_url: "clickworker_com"
+  crunchbase_url: "clickerworker-com"
+  logo_url: "http://www.crowdsortium.org/wp-content/uploads/2011/03/clickworker_Logo-1024x185.png"
+  has_funding: 1
+  searches_for_funding: 0
+  is_hiring: 1
+  company_size: 3
+  category: "Others"
+  sub_categories: 
+    - "Crowdsourcing / Crowdfunding"
+    
+- 
+  name: "T-Venture"
+  description: "T-Venture is the venture capital arm of Deutsche Telekom. Second largest corporate VC worldwide."
+  street: "Gotenstrasse 156"
+  zip: "53175"
+  city: "Bonn"
+  url: http://www.t-venture.de
+  email: "t-venture@telekom.de"
+  searches: "Looking for investments in the ICT and media space to support corporate synergies. Funding size is from early stage to late stage growth investments."
+  provides: "Investments from $300k up to $10m depending on round and company size, marketing and promotion agreements in Deutsche Telekom's footprint Europe and US"
+  facebook_url: 
+  twitter_url: 
+  crunchbase_url: "t-venture"
+  logo_url: "http://www.crunchbase.com/assets/images/resized/0001/9427/19427v1-max-250x250.png"
+  has_funding: 1
+  searches_for_funding: 
+  is_hiring: 
+  company_size: 2
+  category: "Services"
+  sub_categories: 
+    - "Financing"
+
+- 
+  name: "betafabrik"
+  description: "Wir erfinden technisch und inhaltlich anspruchsvolle Online-Unternehmen nach der Lean Startup-Methode."
+  street: "Siegburger Straße 215"
+  zip: "50679"
+  city: "Köln"
+  url: "http://www.betafabrik.de/"
+  email: "info@betafabrik.de"
+  searches: 
+  provides: 
+  facebook_url: "pages/betafabrik/140729285973906"
+  twitter_url: "betafabrik"
+  crunchbase_url: 
+  logo_url: "http://www.betafabrik.de/wp-content/themes/betafabrik/images/logo.jpg"
+  has_funding: 
+  searches_for_funding: 
+  is_hiring: 1
+  company_size: 1
+  category: "Services"
+  sub_categories: 
+    - "Incubator/Accelerator"
+
+- 
+  name: "Coworking Space Gasmotorenfabrik"
+  description: "Wer wenig mehr als seinen Laptop zum Arbeiten braucht, der ist hier genau richtig. Und vor allem in guter Gesellschaft."
+  street: "Deutz-Mülheimerstraße 129"
+  zip: "51063"
+  city: "Köln"
+  url: "http://www.coworkingcologne.de/"
+  email: "kontakt@coworkingcologne.de"
+  searches: "Passionate Coworker"
+  provides: "WLAN, Drucker, Kaffee und gekühlte Getränke"
+  facebook_url: "cowoco"
+  twitter_url: "CowoCo"
+  crunchbase_url: 
+  logo_url: "http://www.smart-urban-stage.com/cologne/files/2011/06/Bildschirmfoto-2011-06-28-um-11.36.031.png"
+  has_funding: 
+  searches_for_funding: 
+  is_hiring: 
+  company_size: 
+  category: "Services"
+  sub_categories: 
+    - "Coworking"
+
+- 
+  name: "betahaus köln"
+  description: "Das betahaus ist ein offener, digital vernetzter und kollaborativer Arbeitsort, der flexibel ist und als Inkubationsplattform für Netzwerk, Innovation und Produktion dient."
+  street: "Venloer Straße 151-153"
+  zip: "50672"
+  city: "Köln"
+  url: "http://koeln.betahaus.de/"
+  email: "koeln@betahaus.de"
+  searches: 
+  provides: "Auf 700qm bieten wir Platz für Innovation, Kreativität und professionelles Arbeiten. Es gibt WLAN, fixe und flexible Arbeitsplätze, Meetingräume, Telefonzellen sowie das betahaus | café."
+  facebook_url: "betahausKoeln"
+  twitter_url: "betahausCGN"
+  crunchbase_url: 
+  logo_url: "http://koeln.betahaus.de/wp-content/themes/betahaus2012/images/logo.gif"
+  has_funding: 
+  searches_for_funding: 
+  is_hiring: 
+  company_size: 1
+  category: "Services"
+  sub_categories: 
+    - "Coworking"
+
+- 
+  name: "Thierhoff Consulting"
+  description: "Thierhoff Consulting ist eine Kölner Unternehmensberatung mit den Schwerpunkten auf Start-Ups & jungen Unternehmen"
+  street: "Lindenstraße 14"
+  zip: "50674"
+  city: "Köln"
+  url: "http://thierhoff-consulting.de/"
+  email: "info@thierhoff-consulting.de"
+  searches: 
+  provides: "Unser Focus liegt dabei zum Einen in der Begleitung bei Wachstumsprozessen wie der Gründung eines neuen Unternehmen oder der Neuausrichtung, sei es aufgrund einer neuen Technologie, eines neuen Projektes, einer neuen Idee oder einfach dem Wunsch stärker zu wachsen als bisher."
+  facebook_url: 
+  twitter_url: "kaithi"
+  crunchbase_url: 
+  logo_url: "http://www.workube.com/uploads/logo/3eee7e6ba5437d2e8f/fb29f0680ec4c7c88f_170.JPG"
+  has_funding: 
+  searches_for_funding: 
+  is_hiring: 
+  company_size: 1
+  category: "Services"
+  sub_categories: 
+    - "Consulting"
