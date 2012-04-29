@@ -9,7 +9,40 @@ window.CompanyOverlay = (latLng, company, map) ->
 
 window.CompanyOverlay.prototype = new google.maps.OverlayView()
 window.CompanyOverlay.prototype.onAdd = () ->
-  @div = jQuery("<div class=\"company-overlay\" style=\"visibility:hidden\"><div class=\"company-overlay-container\"><div class=\"company-overlay-content\">#{@company.name}</div><div class=\"company-overlay-arrow\"></div></div></div>").get(0)
+  html  = '<div class=\"company-overlay\" style=\"visibility:hidden\">'
+  html += '  <div class=\"company-overlay-container\">'
+  html += '    <div class=\"company-overlay-content\">'
+  html += '<img src="' + @company.logo + '" />'
+  html += '<h2>'
+  html += @company.name
+  html += '</h2>'
+  html += '<p>'
+  html += @company.description
+  html += '</p>'
+  html += "<p><a href=\"#{@company.url}\">"
+  html += @company.url
+  html += '</a></p>'
+  html += '<p>'
+  html += @company.street + '<br />'
+  html += @company.zip + " " + @company.city + '<br />'
+  html += '</p>'
+  html += "<p><a href=\"mailto:#{@company.email}\">"
+  html += @company.email
+  html += '</a></p>'
+  html += '<p>We are looking for:<br />'
+  html += @company.description
+  html += '</p>'
+  html += '<p>We are offering:<br />'
+  html += @company.description
+  html += '</p>'
+
+  html += '    </div>'
+  html += '    <div class=\"company-overlay-arrow\">'
+  html += '    </div>'
+  html += '  </div>'
+  html += '</div>'
+  
+  @div = jQuery(html).get(0)
   @getPanes().floatPane.appendChild(@div)
   return
 
