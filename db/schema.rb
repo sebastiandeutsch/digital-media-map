@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(:version => 20120429124136) do
 
   create_table "active_admin_comments", :force => true do |t|
-    t.string   "resource_id",   :null => false
-    t.string   "resource_type", :null => false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "namespace"
+    t.string    "resource_id",   :null => false
+    t.string    "resource_type", :null => false
+    t.integer   "author_id"
+    t.string    "author_type"
+    t.text      "body"
+    t.timestamp "created_at",    :null => false
+    t.timestamp "updated_at",    :null => false
+    t.string    "namespace"
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
@@ -29,27 +29,27 @@ ActiveRecord::Schema.define(:version => 20120429124136) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "admin_users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.string    "email",                  :default => "", :null => false
+    t.string    "encrypted_password",     :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",          :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at",                             :null => false
+    t.timestamp "updated_at",                             :null => false
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string    "name"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "companies", :force => true do |t|
@@ -65,48 +65,48 @@ ActiveRecord::Schema.define(:version => 20120429124136) do
     t.text     "provides",             :limit => 255
     t.string   "facebook_url"
     t.string   "twitter_url"
-    t.boolean  "has_funding"
-    t.boolean  "searches_for_funding"
-    t.boolean  "is_hiring"
+    t.boolean  "has_funding",                         :default => false
+    t.boolean  "searches_for_funding",                :default => false
+    t.boolean  "is_hiring",                           :default => false
     t.integer  "company_size"
-    t.boolean  "not_found"
-    t.boolean  "disabled"
+    t.boolean  "not_found",                           :default => false
+    t.boolean  "disabled",                            :default => false
     t.float    "lon"
     t.float    "lat"
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
     t.string   "logo"
     t.string   "private_slug"
     t.string   "crunchbase_url"
   end
 
   create_table "taggings", :force => true do |t|
-    t.integer  "company_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer   "company_id"
+    t.integer   "tag_id"
+    t.timestamp "created_at", :null => false
+    t.timestamp "updated_at", :null => false
   end
 
   create_table "tags", :force => true do |t|
-    t.string   "name"
-    t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string    "name"
+    t.integer   "category_id"
+    t.timestamp "created_at",  :null => false
+    t.timestamp "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
+    t.string    "email",                  :default => "", :null => false
+    t.string    "encrypted_password",     :default => "", :null => false
+    t.string    "reset_password_token"
+    t.timestamp "reset_password_sent_at"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",          :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at",                             :null => false
+    t.timestamp "updated_at",                             :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

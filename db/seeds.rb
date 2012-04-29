@@ -37,8 +37,6 @@
   #end
 #end
 
-require 'open-uri'
-
 companies = YAML.load File.open(File.join(Rails.root, "db/seed.yml"))
 companies.each do |details|
   company = Company.new(details)
@@ -53,8 +51,7 @@ companies.each do |details|
     tag
   end
   company.tags = tags
-
-  company.logo = open(details["logo_url"])
+  company.remote_logo_url = details["logo_url"]
 
   begin
     company.save!

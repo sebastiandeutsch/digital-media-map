@@ -49,6 +49,7 @@ end
 
 group :development do
   gem "heroku", "~>2.17.0"
+  gem "taps"
   gem 'sqlite3'
 end
 
