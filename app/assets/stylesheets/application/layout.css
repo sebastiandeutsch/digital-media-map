@@ -151,7 +151,7 @@ input[type="checkbox"] {
   font-size:20px;
 }
 #container h4 {
-  margin:20px 0 20px 0;
+  margin:10px 0 20px 0;
   font-size:15px;
   font-weight:700;
 }
@@ -185,6 +185,19 @@ ul.sidebar li h4 {
 }
 ul.sidebar li p {
   margin:0;
+}
+ul.sidebar ol {
+  margin:0 0 0 20px;
+}
+ul.sidebar ol li {
+  background-image:none;
+  background-color:transparent;
+  border:0;
+  margin:10px 0 0 0;
+  padding:0;
+  line-height:22px;
+  font-size:13px;
+  list-style-type:disc;
 }
 ul.companies-new {
   margin-top:33px;
