@@ -36,7 +36,7 @@ a, a:link, a:active, a:visited, a:hover {
 p {
   line-height:22px;
   font-size:13px;
-  margin:0 0 20px 0;
+  margin:0 0 15px 0;
   padding:0;
 }
 p.br {
@@ -76,15 +76,24 @@ header h1 {
 }
 ul#nav {
   float:left;
+  margin-left: 20px;
 }
 ul#nav li {
   float:left;
-  padding:11px 0 0 20px;
+  padding: 10px;
   font-size:13px;
+  border-radius:7px;
+  margin-right: 20px;
 }
 ul#nav li a, ul#nav li a:link, ul#nav li a:active, ul#nav li a:visited {
   text-decoration:none;
   color:#b7b7b7;
+}
+ul#nav li.active {
+  background: #13a2df;
+}
+ul#nav li.active a{
+  color: #fff;
 }
 .clearfix {
   display: inline-block;
@@ -121,6 +130,9 @@ input[type="checkbox"] {
   float:right;
 }
 
+.tags_for_category li {
+  list-style: none;
+}
 #container {
   width:830px;
   padding:25px;
@@ -132,14 +144,18 @@ input[type="checkbox"] {
   font-size:26px;
 }
 #container h3 {
-  margin:0 0 20px 0;
+  margin:30px 0 20px 0;
   font-size:20px;
+}
+#container h4 {
+  margin:20px 0 20px 0;
+  font-size:15px;
+  font-weight:700;
 }
 #content {
   width:450px;
   padding:0 0 30px 0;
   float:left;
-  text-align:justify;
 }
 ul.sidebar {
   width:275px;
@@ -235,7 +251,7 @@ label {
   margin:8px 0;
   display:block;
 }
-form input {
+form input, form textarea, form select {
   width:430px;
   padding:8px;
   border:1px solid #c7c7c7;
@@ -246,6 +262,12 @@ form input {
   background-image:     -ms-linear-gradient(top, #e7e7e7, #fff);
   background-image:      -o-linear-gradient(top, #e7e7e7, #fff);
   background-image:         linear-gradient(to bottom, #e7e7e7, #fff);
+}
+form textarea {
+  height: 100px;
+}
+form select {
+  width: 447px;
 }
 legend {
   display:none;

@@ -39,7 +39,20 @@ jQuery ($) ->
     window.map = new GoogleMaps('map-canvas')
     window.markers = []
     window.companies = {}
-  
+    
+    $('ul#company-sizes li a').on "click", (event) ->
+      data_target = $(this).attr('data-target')
+      if $(this).attr('data-value') == 'on'
+        $('img', $(this)).attr('src', $(this).attr('data-off-image'))
+        $(this).attr('data-value', 'off')
+        state = off
+      else
+        $('img', $(this)).attr('src', $(this).attr('data-on-image'))
+        $(this).attr('data-value', 'on')
+        state = on
+      
+      return false
+    
     $('.menu').on "click", (event) ->
       data_target = $(this).attr('data-target')
       $(data_target).slideToggle()
@@ -76,7 +89,6 @@ jQuery ($) ->
         return
     
       return false
-  
     $('.switch').on "click", (event) ->
       data_target = $(this).attr('data-target')
     
