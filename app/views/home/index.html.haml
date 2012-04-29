@@ -15,7 +15,7 @@
             %a.category-switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#category_#{category.id}" }
               = image_tag 'switch-on.png'
         %li{ :id => "category_#{category.id}", :style => 'display:none' }
-          %ul
+          %ul.submenu
             - category.tags.each do |tag|
               %li
                 .padding
