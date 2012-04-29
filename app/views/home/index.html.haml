@@ -2,6 +2,9 @@
 #map-canvas
 #filter-panel
   = form_for @search, :url => companies_url do |f|
+    %ul
+      %li
+        = f.text_field :name_contains
     %ul#switches
       - Category.all.each do |category|
         %li.category
@@ -12,7 +15,7 @@
             %a.category-switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#category_#{category.id}" }
               = image_tag 'switch-on.png'
         %li{ :id => "category_#{category.id}", :style => 'display:none' }
-          %ul
+          %ul.submenu
             - category.tags.each do |tag|
               %li
                 .padding
@@ -20,9 +23,7 @@
                     = tag.name
                   %a.switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#search_tag_id_#{tag.id}" }
                     = image_tag 'switch-on.png'
-    %ul
-      %li
-        = f.text_field :name_contains
+    %ul.hide
       - Category.all.each do |category|
         %li
           = category.name
