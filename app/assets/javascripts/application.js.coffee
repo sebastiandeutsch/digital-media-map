@@ -45,12 +45,13 @@ jQuery ($) ->
       if $(this).attr('data-value') == 'on'
         $('img', $(this)).attr('src', $(this).attr('data-off-image'))
         $(this).attr('data-value', 'off')
-        state = off
+        $(data_target).attr('checked', false)
       else
         $('img', $(this)).attr('src', $(this).attr('data-on-image'))
         $(this).attr('data-value', 'on')
-        state = on
+        $(data_target).attr('checked', true)
       
+      send_search_form()
       return false
     
     $('.menu').on "click", (event) ->
@@ -60,7 +61,7 @@ jQuery ($) ->
         $(this).removeClass('open')
       else
         $(this).addClass('open')
-    
+      
       return false
   
     $('.category-switch').on "click", (event) ->
@@ -80,14 +81,15 @@ jQuery ($) ->
         if state == on
           $('img', link).attr('src', '/assets/switch-on.png')
           $(link).attr('data-value', 'on')
-          $(data_target).attr('checked', true);
+          $(data_target).attr('checked', true)
         else
           $('img', link).attr('src', '/assets/switch-off.png')
           $(link).attr('data-value', 'off')
-          $(data_target).attr('checked', false);
-      
+          $(data_target).attr('checked', false)
+        
         return
-    
+      
+      send_search_form()
       return false
     $('.switch').on "click", (event) ->
       data_target = $(this).attr('data-target')
