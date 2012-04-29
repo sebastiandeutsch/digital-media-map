@@ -5,6 +5,8 @@
     %ul
       %li
         = f.text_field :name_contains
+    %h2
+      Branches
     %ul#switches
       - Category.all.each do |category|
         %li.category
@@ -23,7 +25,22 @@
                     = tag.name
                   %a.switch{ :href => '#', :'data-value' => 'on', :'data-target' => "#search_tag_id_#{tag.id}" }
                     = image_tag 'switch-on.png'
-    %ul.hide
+    %h2
+      Company Size
+    %ul#company-sizes
+      %li#startup
+        %a{ :href => '#', :'data-value' => 'on', :'data-target' => '', :'data-on-image' => '/assets/company-size-startup-selected.png', :'data-off-image' => '/assets/company-size-startup.png' }
+          = image_tag 'company-size-startup-selected.png'
+      %li#small
+        %a{ :href => '#', :'data-value' => 'on', :'data-target' => '', :'data-on-image' => '/assets/company-size-small-selected.png', :'data-off-image' => '/assets/company-size-small.png' }
+          = image_tag 'company-size-small-selected.png'
+      %li#medium
+        %a{ :href => '#', :'data-value' => 'on', :'data-target' => '', :'data-on-image' => '/assets/company-size-medium-selected.png', :'data-off-image' => '/assets/company-size-medium.png' }
+          = image_tag 'company-size-medium-selected.png'
+      %li#large
+        %a{ :href => '#', :'data-value' => 'on', :'data-target' => '', :'data-on-image' => '/assets/company-size-large-selected.png', :'data-off-image' => '/assets/company-size-large.png' }
+          = image_tag 'company-size-large-selected.png'
+    %ul
       - Category.all.each do |category|
         %li
           = category.name
