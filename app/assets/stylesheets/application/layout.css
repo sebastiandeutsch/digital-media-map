@@ -197,7 +197,6 @@ table {
 tr {
   border-bottom:1px solid #c7c7c7;
   margin:0;
-  display:block;
   background-color:#fff;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e7e7), to(#fff));
   background-image: -webkit-linear-gradient(top, #e7e7e7, #fff);
@@ -217,8 +216,7 @@ th {
 }
 td {
   border-right: 1px solid #c7c7c7;
-  padding:20px 20px;
-  width:207px;
+  padding: 20px;
 }
 tbody tr:last-child, td:last-child {
   border:0;

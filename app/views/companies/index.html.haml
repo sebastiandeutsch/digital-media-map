@@ -9,15 +9,17 @@
       %tr
         %th
           Name
+        %th
+          City
+        %th
+          Description
     %tbody
       - @companies.each do |company|
         %tr
           %td
             = link_to company.name, company_path(company)
           %td
-            = company.city
+            %a{ :href => '#', :title => "#{company.lon}, #{company.lat}" }
+              = company.city
           %td
             = company.description
-          %td
-            = company.lat
-            = company.lon
