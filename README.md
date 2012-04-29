@@ -12,7 +12,7 @@ Sprint:
 
 - Deploy to Heroku
 - Suche muss gestyled werden (Sebastian D.)
-- Formular für Neueintrag
+- Formular für Neueintrag (Bumi)
   - Kategorien
   - Unterkategorien
   - Checkboxen
@@ -24,4 +24,5 @@ Sprint:
     - Social Media URLs
     - Company Size
   - Model
+- Unternehmensinfos einbauen
 - Pin austauschen
