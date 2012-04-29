@@ -10,4 +10,3 @@ FactoryGirl.define do
     email "team@railslove.com"
   end
 end
-
