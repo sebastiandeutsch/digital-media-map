@@ -48,7 +48,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'heroku'
+  gem "heroku", "~>2.17.0"
   gem 'sqlite3'
 end
 
