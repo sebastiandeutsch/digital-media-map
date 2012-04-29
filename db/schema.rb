@@ -66,16 +66,16 @@ ActiveRecord::Schema.define(:version => 20120428211541) do
     t.string   "facebook_url"
     t.string   "twitter_url"
     t.string   "rss_url"
-    t.boolean  "has_funding",          :default => false
-    t.boolean  "searches_for_funding", :default => false
-    t.boolean  "is_hiring",            :default => false
+    t.boolean  "has_funding"
+    t.boolean  "searches_for_funding"
+    t.boolean  "is_hiring"
     t.integer  "company_size"
-    t.boolean  "not_found",            :default => false
-    t.boolean  "disabled",             :default => false
+    t.boolean  "not_found"
+    t.boolean  "disabled"
     t.float    "lon"
     t.float    "lat"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "logo"
     t.string   "private_slug"
   end
