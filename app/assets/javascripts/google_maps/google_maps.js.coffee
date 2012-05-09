@@ -9,4 +9,8 @@ window.GoogleMaps = class
       mapTypeId: google.maps.MapTypeId.ROADMAP
 
     map = new google.maps.Map(document.getElementById(id), options)
+    google.maps.event.addListener map, 'click', ->
+      if window.activeOverlay != null
+        window.activeOverlay.overlay.toggle()
+        window.activeOverlay = null
     return map
