@@ -14,7 +14,7 @@ html, body
   position: absolute
   border: 1px solid #a7a7a7
   width: 300px
-  height: 400px
+  height: 430px
   position: absolute
   +background(none, linear-gradient(color-stops(#e8e8e8, #ffffff)))
 
@@ -24,23 +24,26 @@ html, body
 .company-overlay-content
   position: absolute
   margin: 5px
-  h2
-    font-size: 13px
-    font-weight: 700
-    margin: 10px 0 0 10px
-  a:link, a:visited, a:active
-    color: #009ee2
-    font-weight: 700
-  p
-    margin: 0 0 15px 10px
-    padding: 0
-    line-height: 18px
+  .company-text
+    height: 440px
+    overflow: hidden
+    h2
+      font-size: 13px
+      font-weight: 700
+      margin: 10px 0 0 10px
+    a:link, a:visited, a:active
+      color: #009ee2
+      font-weight: 700
+    p
+      margin: 0 0 15px 10px
+      padding: 0
+      line-height: 18px
 
 .company-overlay-arrow
   position: absolute
   background: transparent url(asset_path('overlay-arrow.png', image)) top left no-repeat
   left: 154px
-  top: 400px
+  top: 450px
   width: 39px
   height: 21px
 

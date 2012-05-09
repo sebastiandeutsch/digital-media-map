@@ -12,6 +12,7 @@ window.CompanyOverlay.prototype.onAdd = () ->
   html  = '<div class=\"company-overlay\" style=\"visibility:hidden\">'
   html += '  <div class=\"company-overlay-container\">'
   html += '    <div class=\"company-overlay-content\">'
+  html += '      <div class=\"company-text\">'
   html += '<img src="' + @company.logo + '" />'
   html += '<h2>'
   html += @company.name
@@ -35,7 +36,7 @@ window.CompanyOverlay.prototype.onAdd = () ->
   html += '<p>We are offering:<br />'
   html += @company.description
   html += '</p>'
-
+  html += '      </div>'
   html += '    </div>'
   html += '    <div class=\"company-overlay-arrow\">'
   html += '    </div>'
@@ -53,7 +54,7 @@ window.CompanyOverlay.prototype.draw = () ->
   @div.style.left = Math.floor(pixelposition.x - 350 / 2) + 'px'
   @div.style.top = Math.floor(pixelposition.y - 400 - 100) + 'px'
   @div.style.width = '350px'
-  @div.style.height = '400px'
+  @div.style.height = '450px'
   return
 
 window.CompanyOverlay.prototype.hide = () ->
