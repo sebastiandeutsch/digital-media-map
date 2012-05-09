@@ -16,7 +16,15 @@ window.MarkerWithPopup = class
       icon: "/assets/pins/pin-0.png"
     
     google.maps.event.addListener @marker, 'click', () =>
+      if window.activeOverlay == @
+        # we are closing the overlay
+        window.activeOverlay = null
+      else
+        # we're toggling with another one, so close the first and open another
+        window.activeOverlay.overlay.toggle() unless window.activeOverlay == null
+        window.activeOverlay = @
       @overlay.toggle()
       return
+    
     return
 

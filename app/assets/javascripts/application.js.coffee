@@ -5,6 +5,7 @@
 
 window.every = every = (t, f) -> setInterval f, t
 window.after = after = (t, f) -> setTimeout f, t
+window.activeOverlay = null
 
 # start the app
 jQuery ($) ->
