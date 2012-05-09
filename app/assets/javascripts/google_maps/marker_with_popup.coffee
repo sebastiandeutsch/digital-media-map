@@ -3,7 +3,6 @@ window.MarkerWithPopup = class
     point = new google.maps.LatLng(@startup.lat, @startup.lon)
     
     @overlay = new CompanyOverlay(point, startup, map)
-    shadow = '/assets/company-holder.png'
     image = new google.maps.MarkerImage(startup.logo,
      null,
      null,
@@ -15,7 +14,6 @@ window.MarkerWithPopup = class
       map: @map,
       title: "Hello World!"
       icon: image
-      shadow: shadow
     
     google.maps.event.addListener @marker, 'click', () =>
       @overlay.toggle()
