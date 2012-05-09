@@ -34,7 +34,11 @@ class LogoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :square do
-    process :resize_to_fill => [50, 50]
+    process :resize_and_pad => [50, 50, :transparent, 'Center']
+  end
+  
+  version :overlay do
+    process :resize_and_pad => [340, 110, :transparent, 'Center']
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
