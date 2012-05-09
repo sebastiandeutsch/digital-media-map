@@ -13,7 +13,7 @@ window.MarkerWithPopup = class
       position: point,
       map: @map,
       title: "Hello World!"
-      icon: image
+      icon: "/assets/pins/pin-0.png"
     
     google.maps.event.addListener @marker, 'click', () =>
       @overlay.toggle()
