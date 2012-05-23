@@ -48,6 +48,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'quiet_assets'
   gem "heroku", "~>2.17.0"
   gem "taps"
   gem 'sqlite3'

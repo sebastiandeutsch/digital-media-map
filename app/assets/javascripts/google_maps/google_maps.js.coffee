@@ -6,7 +6,34 @@ window.GoogleMaps = class
     options =
       zoom: 8
       center: center,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      panControl: false,
+      overviewMapControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      styles: [
+        {
+          featureType: "administrative.province",
+          stylers: [
+            { visibility: "on" },
+            { invert_lightness: true }
+          ]
+        },{
+          featureType: "administrative.country",
+          stylers: [
+            { saturation: -12 },
+            { visibility: "simplified" },
+            { invert_lightness: true }
+          ]
+        },
+        {
+            featureType: "road.highway",
+            stylers: [
+              { saturation: -12 },
+              { visibility: "off" }
+            ]
+          }
+      ]
 
     map = new google.maps.Map(document.getElementById(id), options)
     google.maps.event.addListener map, 'click', ->

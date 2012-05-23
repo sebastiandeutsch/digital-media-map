@@ -2,4 +2,56 @@
 
 #container
   %h1 Edit company information
-  #content= render 'form'
+  = semantic_form_for(@company, :url => company_url(@company.private_slug)) do |f|
+    = f.inputs :name => "Basic" do
+      = f.input :name
+      = f.input :description
+      = f.input :street
+      = f.input :zip
+      = f.input :city
+      = f.input :url
+      = f.input :email
+      = f.input :logo, :as => "uploader"
+
+    %h3 Categories
+    = f.inputs :name => "Categories" do
+      = f.input :category, :collection => Category.all, :label => false
+
+    - Category.all.each do |category|
+      %div{ :id => "tags_for_category-#{category.id}", :class => "tags_for_category", :style => (@company.category_id == category.id ? "" : "display:none") }
+        = f.input :tags, :as => :check_boxes, :collection => category.tags
+
+    = f.inputs :name => "Information" do
+      = f.input :searches, :maxlength => 255
+      = f.input :provides, :maxlength => 255
+
+    = f.inputs :name => "Links" do
+      = f.input :is_hiring, :label => "We are hiring"
+      = f.input :has_funding, :label => "We are funded"
+      = f.input :searches_for_funding, :label => "We are looking for funding"
+
+    %h3
+      Company Size
+    %ul#company-sizes
+      %li#startup
+        = image_tag 'company-size-startup.png'
+        = f.radio_button :company_size, 1, :id => "company_size_1"
+      %li#small
+        = image_tag 'company-size-small.png'
+        = f.radio_button :company_size, 2, :id => "company_size_2"
+      %li#medium
+        = image_tag 'company-size-medium.png'
+        = f.radio_button :company_size, 3, :id => "company_size_3"
+      %li#large
+        = image_tag 'company-size-large.png'
+        = f.radio_button :company_size, 4, :id => "company_size_4"
+
+    %h3 Links
+    = f.inputs :name => "Links" do
+      = f.input :facebook_url
+      = f.input :twitter_url
+      = f.input :crunchbase_url
+
+    = f.actions do
+      = f.action :submit, :as => :button
+

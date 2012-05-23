@@ -35,7 +35,11 @@ class Company < ActiveRecord::Base
   end
 
   def notify_company
-
+    if self.created_by_admin
+      CompanyMailer.new_admin_company(self).deliver
+    else
+      CompanyMailer.new_company(self).deliver
+    end
   end
 
 end

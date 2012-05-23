@@ -1,17 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  helper_method :current_admin_user, :destroy_admin_user_session_path
+  helper_method :current_admin_user
   
   def authenticate_admin_user!
-    true
+    redirect_to new_user_session_url and return false unless current_user.admin?
   end
   
   def current_admin_user
-    User.first
-  end
-  
-  def destroy_admin_user_session_path
-    
+    current_user
   end
 end

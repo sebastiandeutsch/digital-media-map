@@ -14,7 +14,7 @@ class CompaniesController < ApplicationController
   end
 
   def edit
-    @company = Company.find(params[:id])
+    @company = Company.find_by_private_slug!(params[:id])
   end
 
   def create
@@ -27,7 +27,7 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    @company = Company.find(params[:id])
+    @company = Company.find_by_private_slug!(params[:id])
 
     if @company.update_attributes(params[:company])
       redirect_to @company

@@ -13,7 +13,8 @@ window.CompanyOverlay.prototype.onAdd = () ->
   html += '  <div class=\"company-overlay-container\">'
   html += '    <div class=\"company-overlay-content\">'
   html += '      <div class=\"company-text\">'
-  html += '<img src="' + @company.logo + '" />'
+  if @company.logo.length > 1
+    html += '<img src="' + @company.logo + '" />'
   html += '<h2>'
   html += @company.name
   html += '</h2>'
