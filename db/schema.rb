@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120523112923) do
+ActiveRecord::Schema.define(:version => 20120523121006) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120523112923) do
     t.string   "logo"
     t.string   "private_slug"
     t.string   "crunchbase_url"
+    t.boolean  "created_by_admin"
   end
 
   create_table "taggings", :force => true do |t|
